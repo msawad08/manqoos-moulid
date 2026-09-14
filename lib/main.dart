@@ -95,22 +95,18 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           : const SettingsScreen(),
     ),
-    bottomNavigationBar: NavigationBar(
-      selectedIndex: selectedTab,
-      onDestinationSelected: (index) => setState(() => selectedTab = index),
-      indicatorColor: paleGreen,
-      destinations: const [
-        NavigationDestination(icon: Icon(Icons.home_outlined), label: 'HOME'),
-        NavigationDestination(
-          icon: Icon(Icons.menu_book_outlined),
-          label: 'MAWLID',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.settings_outlined),
-          label: 'SETTINGS',
-        ),
-      ],
-    ),
+    bottomNavigationBar: selectedTab == 1
+        ? null
+        : NavigationBar(
+            selectedIndex: selectedTab,
+            onDestinationSelected: (index) => setState(() => selectedTab = index),
+            indicatorColor: paleGreen,
+            destinations: const [
+              NavigationDestination(icon: Icon(Icons.home_outlined), label: 'HOME'),
+              NavigationDestination(icon: Icon(Icons.menu_book_outlined), label: 'MAWLID'),
+              NavigationDestination(icon: Icon(Icons.settings_outlined), label: 'SETTINGS'),
+            ],
+          ),
   );
 }
 
@@ -323,10 +319,11 @@ class GreenHeader extends StatelessWidget {
 }
 
 class BrandedAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const BrandedAppBar({super.key, required this.title, this.subtitle});
+  const BrandedAppBar({super.key, required this.title, this.subtitle, this.action});
 
   final String title;
   final String? subtitle;
+  final Widget? action;
 
   @override
   Size get preferredSize => const Size.fromHeight(94);
@@ -377,7 +374,7 @@ class BrandedAppBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
           ),
-          const SizedBox(width: 12),
+          action ?? const SizedBox(width: 12),
         ],
       ),
     ),
@@ -639,7 +636,17 @@ class _ReaderScreenState extends State<ReaderScreen> {
   Widget build(BuildContext context) => ValueListenableBuilder<AppSettings>(
     valueListenable: appSettings,
     builder: (context, settings, _) => Scaffold(
-      appBar: const BrandedAppBar(title: 'Mawlid', subtitle: 'Translation'),
+      appBar: BrandedAppBar(
+        title: 'Mawlid',
+        subtitle: 'Translation',
+        action: IconButton(
+          tooltip: 'Settings',
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(builder: (_) => const SettingsScreen()),
+          ),
+          icon: const Icon(Icons.settings, color: Colors.white, size: 28),
+        ),
+      ),
       body: FutureBuilder<MawlidContent>(
         future: settings.language == 'Kannada'
             ? MawlidContent.loadKannada()
@@ -690,7 +697,7 @@ class _ReaderScreenState extends State<ReaderScreen> {
         showExplanation: showExplanation,
         explanationEnabled: selectedHasExplanation,
         reciter: settings.reciter,
-        onExplanation: () => setState(() => showExplanation = !showExplanation),
+        onExplanation: () => _showExplanation(context),
         onCopy: () => _copySelectedEntry(context),
         onShare: () => _shareSelectedEntry(context),
       ),
@@ -751,8 +758,6 @@ class _ReaderScreenState extends State<ReaderScreen> {
               ),
             ),
             ReaderVerse(text: translation, selected: selected),
-            if (selected && showExplanation && entry.explanation.isNotEmpty)
-              ExplanationBlock(text: entry.explanation),
           ],
         ),
       ),
@@ -777,6 +782,38 @@ class _ReaderScreenState extends State<ReaderScreen> {
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text('Verse copied')));
     }
+  }
+
+  Future<void> _showExplanation(BuildContext context) async {
+    final content = await _loadContent();
+    final entry = _selectedEntry(content);
+    if (entry == null || entry.explanation.isEmpty || !context.mounted) return;
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Explanation'),
+        content: SizedBox(
+          width: double.maxFinite,
+          child: SingleChildScrollView(
+            child: Text(
+              entry.explanation,
+              style: const TextStyle(
+                color: deepGreen,
+                fontFamily: 'NotoSansKannada',
+                fontSize: 17,
+                height: 1.5,
+              ),
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: const Text('CLOSE'),
+          ),
+        ],
+      ),
+    );
   }
 
   Future<void> _shareSelectedEntry(BuildContext context) async {
@@ -981,7 +1018,17 @@ class _ArabicPdfScreenState extends State<ArabicPdfScreen> {
     });
     final chapters = orderedChapterNumbers(widget.chapterNumber);
     return Scaffold(
-      appBar: const BrandedAppBar(title: 'Mawlid', subtitle: 'Arabic pages'),
+      appBar: BrandedAppBar(
+        title: 'Mawlid',
+        subtitle: 'Arabic pages',
+        action: IconButton(
+          tooltip: 'Settings',
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute<void>(builder: (_) => const SettingsScreen()),
+          ),
+          icon: const Icon(Icons.settings, color: Colors.white, size: 28),
+        ),
+      ),
       body: ListView(
         controller: scrollController,
         padding: const EdgeInsets.symmetric(vertical: 12),
@@ -1024,8 +1071,46 @@ class _ArabicPdfScreenState extends State<ArabicPdfScreen> {
           ],
         ],
       ),
+      bottomNavigationBar: const AudioBar(),
     );
   }
+}
+
+class AudioBar extends StatelessWidget {
+  const AudioBar({super.key});
+
+  @override
+  Widget build(BuildContext context) => Material(
+    color: brightGreen,
+    child: SafeArea(
+      child: SizedBox(
+        height: 72,
+        child: Row(
+          children: [
+            IconButton(
+              onPressed: () {},
+              color: Colors.white,
+              icon: const Icon(Icons.play_circle_fill, size: 32),
+            ),
+            IconButton(
+              onPressed: () {},
+              color: Colors.white,
+              icon: const Icon(Icons.stop_circle, size: 32),
+            ),
+            const Expanded(
+              child: Text(
+                'Arabic recitation',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(width: 12),
+          ],
+        ),
+      ),
+    ),
+  );
 }
 
 List<String> chapterPageAssets(int chapter) {
