@@ -20,23 +20,23 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 ## Phase 2: Flutter Mobile Foundation
 
 - [x] Create the Flutter project with iOS and Android targets.
-- [ ] Define the app theme, typography, colors, and reusable ornamental widgets.
-- [ ] Bundle supplied image assets through Flutter asset configuration.
-- [ ] Set up a route/state structure for home, chapters, reader, reciter, settings, and about screens.
+- [x] Define the app theme, typography, colors, and reusable ornamental widgets.
+- [x] Bundle supplied image assets through Flutter asset configuration.
+- [x] Set up a route/state structure for home, chapters, reader, reciter, settings, and about screens.
 - [ ] Add Android and iOS app metadata, launcher icon, and splash treatment.
 
 **Exit criteria:** The app builds and launches on both mobile targets with the main route structure in place.
 
 ## Phase 3: Interactive Prototype
 
-- [ ] Implement the green geometric visual system and responsive phone layout.
-- [ ] Implement the home menu and persistent bottom navigation.
-- [ ] Implement chapter selection.
-- [ ] Implement the translation reader view.
-- [ ] Implement reciter selection view.
-- [ ] Implement settings language toggle.
-- [ ] Implement About Mawlid and About App views.
-- [ ] Add basic share/copy feedback states.
+- [x] Implement the green geometric visual system and responsive phone layout.
+- [x] Implement the home menu and persistent bottom navigation.
+- [x] Implement chapter selection.
+- [x] Implement the translation reader view.
+- [x] Implement reciter selection view.
+- [x] Implement settings language toggle.
+- [x] Implement About Mawlid and About App views.
+- [x] Add basic screen interaction states.
 - [ ] Replace placeholder text with verified workbook/PDF content.
 - [ ] Add real chapter pagination and reading position state.
 
@@ -81,8 +81,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 | Phase | Status | Current blocker | Next action |
 | --- | --- | --- | --- |
 | 1. Reference Audit | In progress | Kannada normalization and PSD export remain | Normalize translations, export needed artwork |
-| 2. Flutter Mobile Foundation | In progress | Theme and reusable widgets are still default | Define the Flutter theme |
-| 3. Interactive Prototype | Not started | Flutter screens need implementation | Port the visual prototype |
+| 2. Flutter Mobile Foundation | In progress | App metadata and launcher treatment remain | Add mobile branding metadata |
+| 3. Interactive Prototype | In progress | Content is still placeholder | Connect verified workbook/PDF content |
 | 4. Content and Audio | Not started | Audio source not yet confirmed | Inspect archives |
 | 5. Visual Fidelity | Not started | Needs device screenshot comparison | Capture Android/iOS screens |
 | 6. Verification and Release | Not started | Device/build targets need setup | Run analyzer and mobile builds |
