@@ -20,4 +20,17 @@ void main() {
     expect(find.text('Chapters'), findsOneWidget);
     expect(find.textContaining('Chapter 1'), findsOneWidget);
   });
+
+  testWidgets('chapter reader keeps later chapters in the same scroll flow', (
+    tester,
+  ) async {
+    await tester.pumpWidget(const ManqoosApp());
+    await tester.tap(find.text('MAWLID').first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Chapter 3'));
+    await tester.pumpAndSettle();
+
+    expect(find.textContaining('CHAPTER 03'), findsOneWidget);
+    expect(orderedChapterNumbers(3), [3, 4, 5, 6, 1, 2]);
+  });
 }

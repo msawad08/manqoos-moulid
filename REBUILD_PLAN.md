@@ -50,6 +50,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 ## Phase 4: Content and Audio
 
 - [ ] Parse the six chapter PDFs into structured chapter content.
+- [x] Render the six chapter PDFs into compressed WebP pages for lightweight offline reading.
 - [ ] Convert the six Kannada workbooks into app-ready structured content.
 - [x] Convert the six English workbooks into app-ready structured content.
 - [ ] Add Malayalam, Kannada, and English content where available.

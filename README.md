@@ -27,8 +27,10 @@ This app is a reverse-engineered rebuild created from the available source refer
 - assets/content/kannada_chapters.json: generated UTF-8 Kannada chapter data
 - assets/fonts/: bundled Noto Sans Kannada, Noto Naskh Arabic, and Amiri fonts
 - assets/pdf/: compressed chapter PDF assets used by the Arabic reader
+- assets/pdf_pages/: compressed WebP page strip used by the lightweight Arabic reader
 - tool/convert_xlsx_sources.py: workbook-to-JSON conversion utility
 - tool/normalize_kannada_sources.py: strict mapping-driven Nudi-to-Unicode normalization pipeline
+- tool/render_pdf_webp.py: renders supplied chapter PDFs into compressed WebP pages
 - android/: Android configuration
 - ios/: iOS configuration
 - test/: widget tests
