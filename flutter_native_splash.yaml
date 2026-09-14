@@ -1,0 +1,12 @@
+flutter_native_splash:
+  # Full screen splash for iOS and legacy Android (pre-Android 12)
+  background_image: "assets/splash/welcome_page.png"
+  ios_content_mode: "scaleAspectFill"
+  android_gravity: "fill"
+  fullscreen: true
+
+  # Android 12+ Splash Screen (Adaptive Icon API)
+  # Solid green background with centered M Mawlid Icon
+  android_12:
+    color: "#058209"
+    image: "assets/splash/m_mawlid_icon_android12.png"
