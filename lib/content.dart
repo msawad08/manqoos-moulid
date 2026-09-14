@@ -98,7 +98,6 @@ class MawlidContent {
   }
 }
 
-String pdfAssetForChapter(int chapterNumber) =>
-    chapterNumber == 6
-        ? 'assets/pdf/chapter 6 dua.pdf'
-        : 'assets/pdf/Chapter $chapterNumber.pdf';
+String pdfAssetForChapter(int chapterNumber) => chapterNumber == 6
+    ? 'assets/pdf/chapter 6 dua.pdf'
+    : 'assets/pdf/Chapter $chapterNumber.pdf';

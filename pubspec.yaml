@@ -65,7 +65,23 @@ flutter:
     - assets/content/chapters.json
     - assets/content/kannada_chapters.json
     - assets/pdf/
-    - assets/pdf_pages/
+    - assets/pdf_pages_png/chapter_1/page_01.png
+    - assets/pdf_pages_png/chapter_1/page_02.png
+    - assets/pdf_pages_png/chapter_1/page_03.png
+    - assets/pdf_pages_png/chapter_2/page_01.png
+    - assets/pdf_pages_png/chapter_2/page_02.png
+    - assets/pdf_pages_png/chapter_2/page_03.png
+    - assets/pdf_pages_png/chapter_3/page_01.png
+    - assets/pdf_pages_png/chapter_3/page_02.png
+    - assets/pdf_pages_png/chapter_3/page_03.png
+    - assets/pdf_pages_png/chapter_4/page_01.png
+    - assets/pdf_pages_png/chapter_4/page_02.png
+    - assets/pdf_pages_png/chapter_5/page_01.png
+    - assets/pdf_pages_png/chapter_5/page_02.png
+    - assets/pdf_pages_png/chapter_5/page_03.png
+    - assets/pdf_pages_png/chapter_5/page_04.png
+    - assets/pdf_pages_png/chapter_6/page_01.png
+    - assets/pdf_pages_png/chapter_6/page_02.png
 
   fonts:
     - family: NotoSansKannada

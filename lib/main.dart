@@ -16,7 +16,8 @@ class AppSettings {
     this.translationEnabled = true,
     this.mushafArabic = true,
     this.language = 'Kannada',
-    this.reciter = 'Sayyid Thaha Tangal Pookkottur / Hafiz Nizamuddeen Mahmoodi',
+    this.reciter =
+        'Sayyid Thaha Tangal Pookkottur / Hafiz Nizamuddeen Mahmoodi',
   });
 
   final bool translationEnabled;
@@ -29,13 +30,12 @@ class AppSettings {
     bool? mushafArabic,
     String? language,
     String? reciter,
-  }) =>
-      AppSettings(
-        translationEnabled: translationEnabled ?? this.translationEnabled,
-        mushafArabic: mushafArabic ?? this.mushafArabic,
-        language: language ?? this.language,
-        reciter: reciter ?? this.reciter,
-      );
+  }) => AppSettings(
+    translationEnabled: translationEnabled ?? this.translationEnabled,
+    mushafArabic: mushafArabic ?? this.mushafArabic,
+    language: language ?? this.language,
+    reciter: reciter ?? this.reciter,
+  );
 }
 
 class HomeMenuItem {
@@ -120,13 +120,41 @@ class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = <HomeMenuItem>[
-      HomeMenuItem(icon: Icons.menu_book, label: 'Mawlid', page: const ChaptersScreen()),
-      HomeMenuItem(icon: Icons.grid_view, label: 'Q&A', page: const AboutScreen(title: 'Q&A')),
-      HomeMenuItem(icon: Icons.info_outline, label: 'About Mawlid', page: const AboutScreen(title: 'About Mawlid')),
-      HomeMenuItem(icon: Icons.record_voice_over, label: 'Reciter', page: const ReciterScreen()),
-      HomeMenuItem(icon: Icons.settings, label: 'Settings', page: const SettingsScreen()),
-      HomeMenuItem(icon: Icons.phone_android, label: 'About App', page: const AboutScreen(title: 'About App')),
-      HomeMenuItem(icon: Icons.people, label: 'About Us', page: const AboutScreen(title: 'About Us')),
+      HomeMenuItem(
+        icon: Icons.menu_book,
+        label: 'Mawlid',
+        page: const ChaptersScreen(),
+      ),
+      HomeMenuItem(
+        icon: Icons.grid_view,
+        label: 'Q&A',
+        page: const AboutScreen(title: 'Q&A'),
+      ),
+      HomeMenuItem(
+        icon: Icons.info_outline,
+        label: 'About Mawlid',
+        page: const AboutScreen(title: 'About Mawlid'),
+      ),
+      HomeMenuItem(
+        icon: Icons.record_voice_over,
+        label: 'Reciter',
+        page: const ReciterScreen(),
+      ),
+      HomeMenuItem(
+        icon: Icons.settings,
+        label: 'Settings',
+        page: const SettingsScreen(),
+      ),
+      HomeMenuItem(
+        icon: Icons.phone_android,
+        label: 'About App',
+        page: const AboutScreen(title: 'About App'),
+      ),
+      HomeMenuItem(
+        icon: Icons.people,
+        label: 'About Us',
+        page: const AboutScreen(title: 'About Us'),
+      ),
       const HomeMenuItem(icon: Icons.share, label: 'Share'),
     ];
     return SingleChildScrollView(
@@ -149,12 +177,14 @@ class HomeContent extends StatelessWidget {
                 onTap: () {
                   final item = items[index];
                   if (item.page != null) {
-                    Navigator.of(context).push(
-                      MaterialPageRoute<void>(builder: (_) => item.page!),
-                    );
+                    Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute<void>(builder: (_) => item.page!));
                   } else {
                     SharePlus.instance.share(
-                      ShareParams(text: 'Explore Manqoos Mawlid with Islamic Way.'),
+                      ShareParams(
+                        text: 'Explore Manqoos Mawlid with Islamic Way.',
+                      ),
                     );
                   }
                 },
@@ -292,13 +322,75 @@ class GreenHeader extends StatelessWidget {
   );
 }
 
+class BrandedAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const BrandedAppBar({super.key, required this.title, this.subtitle});
+
+  final String title;
+  final String? subtitle;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(94);
+
+  @override
+  Widget build(BuildContext context) => Container(
+    height: preferredSize.height,
+    decoration: const BoxDecoration(
+      color: brightGreen,
+      image: DecorationImage(
+        image: AssetImage('reciter_header_bg.png'),
+        fit: BoxFit.cover,
+        opacity: .3,
+      ),
+      boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 5)],
+    ),
+    child: SafeArea(
+      bottom: false,
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: () => Navigator.maybePop(context),
+            color: Colors.white,
+            icon: const Icon(Icons.arrow_back, size: 30),
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                if (subtitle != null)
+                  Text(
+                    subtitle!,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                  ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 12),
+        ],
+      ),
+    ),
+  );
+}
+
 class ChaptersScreen extends StatelessWidget {
   const ChaptersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Chapters')),
+      appBar: const BrandedAppBar(title: 'Chapters', subtitle: 'ಅಧ್ಯಾಯಗಳು'),
       body: FutureBuilder<MawlidContent>(
         future: MawlidContent.loadEnglish(),
         builder: (context, snapshot) {
@@ -363,7 +455,7 @@ class ReciterScreen extends StatelessWidget {
       'Arif Sa\'adi Katipalla',
     ];
     return Scaffold(
-      appBar: AppBar(title: const Text('Reciter')),
+      appBar: const BrandedAppBar(title: 'Reciter', subtitle: 'ಪಾಠ ಮಾಡುವವರು'),
       body: PatternBody(
         child: Column(
           children: names
@@ -381,10 +473,12 @@ class ReciterScreen extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    appSettings.value = appSettings.value.copyWith(reciter: name);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('$name selected')),
+                    appSettings.value = appSettings.value.copyWith(
+                      reciter: name,
                     );
+                    ScaffoldMessenger.of(
+                      context,
+                    ).showSnackBar(SnackBar(content: Text('$name selected')));
                   },
                 ),
               )
@@ -406,50 +500,85 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) => ValueListenableBuilder<AppSettings>(
     valueListenable: appSettings,
     builder: (context, settings, _) => Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: const BrandedAppBar(title: 'Settings', subtitle: 'ಸೆಟ್ಟಿಂಗ್ಸ್'),
       body: ListView(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.fromLTRB(18, 20, 18, 28),
         children: [
-          Row(
-            children: [
-              const Expanded(
-                child: Text(
-                  'Translation language',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ),
-              DropdownButton<String>(
-                value: settings.language,
-                items: const [
-                  DropdownMenuItem(value: 'Kannada', child: Text('Kannada')),
-                  DropdownMenuItem(value: 'English', child: Text('English')),
-                ],
-                onChanged: (value) => appSettings.value = settings.copyWith(
-                  language: value,
-                ),
-              ),
-            ],
-          ),
-          SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero,
-            title: const Text('Show translation'),
-            subtitle: const Text('When disabled, open the Arabic chapter PDF'),
-            value: settings.translationEnabled,
-            onChanged: (value) => appSettings.value = settings.copyWith(
-              translationEnabled: value,
+          SettingsSection(
+            title: 'Translation language',
+            child: SegmentedButton<String>(
+              segments: const [
+                ButtonSegment(value: 'Kannada', label: Text('Kannada')),
+                ButtonSegment(value: 'English', label: Text('English')),
+              ],
+              selected: {settings.language},
+              onSelectionChanged: (value) =>
+                  appSettings.value = settings.copyWith(language: value.first),
             ),
           ),
-          SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero,
-            title: const Text('Mushaf Arabic font'),
-            subtitle: const Text('Use Noto Naskh Arabic instead of Amiri'),
-            value: settings.mushafArabic,
-            onChanged: (value) => appSettings.value = settings.copyWith(
-              mushafArabic: value,
+          SettingsSection(
+            title: 'Reading mode',
+            child: Column(
+              children: [
+                SwitchListTile.adaptive(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('Show translation'),
+                  subtitle: const Text('Off opens the Arabic page reader'),
+                  value: settings.translationEnabled,
+                  onChanged: (value) => appSettings.value = settings.copyWith(
+                    translationEnabled: value,
+                  ),
+                ),
+                SwitchListTile.adaptive(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('Mushaf Arabic font'),
+                  subtitle: const Text(
+                    'Use Noto Naskh Arabic instead of Amiri',
+                  ),
+                  value: settings.mushafArabic,
+                  onChanged: (value) => appSettings.value = settings.copyWith(
+                    mushafArabic: value,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
       ),
+    ),
+  );
+}
+
+class SettingsSection extends StatelessWidget {
+  const SettingsSection({super.key, required this.title, required this.child});
+
+  final String title;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    margin: const EdgeInsets.only(bottom: 18),
+    padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      border: Border.all(color: brightGreen.withValues(alpha: .35)),
+      borderRadius: BorderRadius.circular(12),
+      boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5)],
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            color: deepGreen,
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 8),
+        child,
+      ],
     ),
   );
 }
@@ -459,7 +588,7 @@ class AboutScreen extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: Text(title)),
+    appBar: BrandedAppBar(title: title),
     body: PatternBody(
       child: SingleChildScrollView(
         child: Text(
@@ -507,64 +636,74 @@ class _ReaderScreenState extends State<ReaderScreen> {
   Widget build(BuildContext context) => ValueListenableBuilder<AppSettings>(
     valueListenable: appSettings,
     builder: (context, settings, _) => Scaffold(
-      appBar: AppBar(title: const Text('Mawlid')),
+      appBar: const BrandedAppBar(title: 'Mawlid', subtitle: 'Translation'),
       body: FutureBuilder<MawlidContent>(
         future: settings.language == 'Kannada'
-          ? MawlidContent.loadKannada()
-          : MawlidContent.loadEnglish(),
-      builder: (context, snapshot) {
-        final content = snapshot.data ?? MawlidContent.fallbackEnglish();
-        final chapters = orderedChapters(content.chapters, widget.chapterNumber);
-        for (final chapter in chapters) {
-          chapterKeys.putIfAbsent(chapter.number, GlobalKey.new);
-        }
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          final target = chapterKeys[widget.chapterNumber]?.currentContext;
-          if (target != null && scrollController.hasClients) {
-            Scrollable.ensureVisible(target, duration: const Duration(milliseconds: 1));
+            ? MawlidContent.loadKannada()
+            : MawlidContent.loadEnglish(),
+        builder: (context, snapshot) {
+          final content = snapshot.data ?? MawlidContent.fallbackEnglish();
+          final chapters = orderedChapters(
+            content.chapters,
+            widget.chapterNumber,
+          );
+          for (final chapter in chapters) {
+            chapterKeys.putIfAbsent(chapter.number, GlobalKey.new);
           }
-        });
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            final target = chapterKeys[widget.chapterNumber]?.currentContext;
+            if (target != null && scrollController.hasClients) {
+              Scrollable.ensureVisible(
+                target,
+                duration: const Duration(milliseconds: 1),
+              );
+            }
+          });
 
-        return ListView(
-          controller: scrollController,
-          children: [
-            for (final chapter in chapters) ...[
-              ChapterDivider(
-                key: chapterKeys[chapter.number],
-                chapterNumber: chapter.number,
-              ),
-              ...chapter.entries.map(
-                (entry) => Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(18),
-                      child: Text(
-                        entry.arabic,
-                        textAlign: TextAlign.center,
-                        textDirection: TextDirection.rtl,
-                        style: TextStyle(
-                          fontFamily: settings.mushafArabic ? 'NotoNaskhArabic' : 'Amiri',
-                          fontSize: 25,
-                          color: deepGreen,
+          return ListView(
+            controller: scrollController,
+            children: [
+              for (final chapter in chapters) ...[
+                ChapterDivider(
+                  key: chapterKeys[chapter.number],
+                  chapterNumber: chapter.number,
+                ),
+                ...chapter.entries.map(
+                  (entry) => Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(18),
+                        child: Text(
+                          entry.arabic,
+                          textAlign: TextAlign.center,
+                          textDirection: TextDirection.rtl,
+                          style: TextStyle(
+                            fontFamily: settings.mushafArabic
+                                ? 'NotoNaskhArabic'
+                                : 'Amiri',
+                            fontSize: 25,
+                            color: deepGreen,
+                          ),
                         ),
                       ),
-                    ),
-                    ReaderVerse(
-                      text: settings.language == 'Kannada' && entry.kannada.isNotEmpty
-                          ? entry.kannada
-                          : entry.english,
-                    ),
-                    if (showExplanation && entry.explanation.isNotEmpty)
-                      ExplanationBlock(text: entry.explanation),
-                  ],
+                      ReaderVerse(
+                        text:
+                            settings.language == 'Kannada' &&
+                                entry.kannada.isNotEmpty
+                            ? entry.kannada
+                            : entry.english,
+                      ),
+                      if (showExplanation && entry.explanation.isNotEmpty)
+                        ExplanationBlock(text: entry.explanation),
+                    ],
+                  ),
                 ),
-              ),
+              ],
+              const SizedBox(height: 86),
             ],
-            const SizedBox(height: 86),
-          ],
-        );
-      },
-    ),
+          );
+        },
+      ),
       bottomNavigationBar: ReaderActionBar(
         showExplanation: showExplanation,
         reciter: settings.reciter,
@@ -575,7 +714,8 @@ class _ReaderScreenState extends State<ReaderScreen> {
     ),
   );
 
-  Future<MawlidContent> _loadContent() => appSettings.value.language == 'Kannada'
+  Future<MawlidContent> _loadContent() =>
+      appSettings.value.language == 'Kannada'
       ? MawlidContent.loadKannada()
       : MawlidContent.loadEnglish();
 
@@ -585,18 +725,23 @@ class _ReaderScreenState extends State<ReaderScreen> {
       (entry) => entry.number == widget.chapterNumber,
       orElse: () => content.chapters.first,
     );
-    return chapter.entries.map((entry) {
-      final translation = appSettings.value.language == 'Kannada' && entry.kannada.isNotEmpty
-          ? entry.kannada
-          : entry.english;
-      return '${entry.arabic}\n$translation${entry.explanation.isEmpty ? '' : '\n${entry.explanation}'}';
-    }).join('\n\n');
+    return chapter.entries
+        .map((entry) {
+          final translation =
+              appSettings.value.language == 'Kannada' &&
+                  entry.kannada.isNotEmpty
+              ? entry.kannada
+              : entry.english;
+          return '${entry.arabic}\n$translation${entry.explanation.isEmpty ? '' : '\n${entry.explanation}'}';
+        })
+        .join('\n\n');
   }
 
   Future<void> _copyChapter(BuildContext context) async {
     await Clipboard.setData(ClipboardData(text: await _chapterText()));
     if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Chapter copied')));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Chapter copied')));
     }
   }
 
@@ -629,7 +774,14 @@ class ExplanationBlock extends StatelessWidget {
 }
 
 class ReaderActionBar extends StatelessWidget {
-  const ReaderActionBar({super.key, required this.showExplanation, required this.reciter, required this.onExplanation, required this.onCopy, required this.onShare});
+  const ReaderActionBar({
+    super.key,
+    required this.showExplanation,
+    required this.reciter,
+    required this.onExplanation,
+    required this.onCopy,
+    required this.onShare,
+  });
   final bool showExplanation;
   final String reciter;
   final VoidCallback onExplanation;
@@ -647,17 +799,44 @@ class ReaderActionBar extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
               children: [
-                IconButton(onPressed: () {}, color: Colors.white, icon: const Icon(Icons.play_circle_fill)),
-                IconButton(onPressed: () {}, color: Colors.white, icon: const Icon(Icons.stop_circle)),
-                Expanded(child: Text(reciter, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+                IconButton(
+                  onPressed: () {},
+                  color: Colors.white,
+                  icon: const Icon(Icons.play_circle_fill),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  color: Colors.white,
+                  icon: const Icon(Icons.stop_circle),
+                ),
+                Expanded(
+                  child: Text(
+                    reciter,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
           Row(
             children: [
-              _ReaderAction(icon: Icons.article, label: 'EXPLANATION', active: showExplanation, onPressed: onExplanation),
+              _ReaderAction(
+                icon: Icons.article,
+                label: 'EXPLANATION',
+                active: showExplanation,
+                onPressed: onExplanation,
+              ),
               _ReaderAction(icon: Icons.copy, label: 'COPY', onPressed: onCopy),
-              _ReaderAction(icon: Icons.share, label: 'SHARE', onPressed: onShare),
+              _ReaderAction(
+                icon: Icons.share,
+                label: 'SHARE',
+                onPressed: onShare,
+              ),
             ],
           ),
         ],
@@ -667,7 +846,12 @@ class ReaderActionBar extends StatelessWidget {
 }
 
 class _ReaderAction extends StatelessWidget {
-  const _ReaderAction({required this.icon, required this.label, required this.onPressed, this.active = false});
+  const _ReaderAction({
+    required this.icon,
+    required this.label,
+    required this.onPressed,
+    this.active = false,
+  });
   final IconData icon;
   final String label;
   final VoidCallback onPressed;
@@ -675,10 +859,36 @@ class _ReaderAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Expanded(
-    child: TextButton.icon(
-      onPressed: onPressed,
-      icon: Icon(icon, color: active ? paleGreen : Colors.white),
-      label: Text(label, style: TextStyle(color: active ? paleGreen : Colors.white, fontWeight: FontWeight.bold)),
+    child: SizedBox(
+      height: 72,
+      child: TextButton(
+        onPressed: onPressed,
+        style: TextButton.styleFrom(
+          foregroundColor: active ? paleGreen : Colors.white,
+          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, color: active ? paleGreen : Colors.white, size: 25),
+            const SizedBox(height: 3),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                label,
+                maxLines: 1,
+                style: TextStyle(
+                  color: active ? paleGreen : Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 11,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     ),
   );
 }
@@ -710,12 +920,15 @@ class _ArabicPdfScreenState extends State<ArabicPdfScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final target = chapterKeys[widget.chapterNumber]?.currentContext;
       if (target != null && scrollController.hasClients) {
-        Scrollable.ensureVisible(target, duration: const Duration(milliseconds: 1));
+        Scrollable.ensureVisible(
+          target,
+          duration: const Duration(milliseconds: 1),
+        );
       }
     });
     final chapters = orderedChapterNumbers(widget.chapterNumber);
     return Scaffold(
-      appBar: AppBar(title: const Text('Arabic Mawlid')),
+      appBar: const BrandedAppBar(title: 'Mawlid', subtitle: 'Arabic pages'),
       body: ListView(
         controller: scrollController,
         padding: const EdgeInsets.symmetric(vertical: 12),
@@ -730,7 +943,9 @@ class _ArabicPdfScreenState extends State<ArabicPdfScreen> {
                     color: Colors.white,
                     border: Border.all(color: brightGreen, width: 2),
                     borderRadius: BorderRadius.circular(6),
-                    boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 5)],
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black12, blurRadius: 5),
+                    ],
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(4),
@@ -749,11 +964,14 @@ List<String> chapterPageAssets(int chapter) {
   const pageCounts = [0, 3, 3, 3, 2, 4, 2];
   return [
     for (var page = 1; page <= pageCounts[chapter]; page++)
-      'assets/pdf_pages/chapter_$chapter/page_${page.toString().padLeft(2, '0')}.webp',
+      'assets/pdf_pages_png/chapter_$chapter/page_${page.toString().padLeft(2, '0')}.png',
   ];
 }
 
-List<MawlidChapter> orderedChapters(List<MawlidChapter> chapters, int selected) => [
+List<MawlidChapter> orderedChapters(
+  List<MawlidChapter> chapters,
+  int selected,
+) => [
   ...chapters.where((chapter) => chapter.number >= selected),
   ...chapters.where((chapter) => chapter.number < selected),
 ];
@@ -781,9 +999,15 @@ class ChapterDivider extends StatelessWidget {
       ),
     ),
     child: Text(
-      chapterNumber == 6 ? 'CHAPTER 06  ·  DUA' : 'CHAPTER ${chapterNumber.toString().padLeft(2, '0')}  ·  HADEES & BAITH',
+      chapterNumber == 6
+          ? 'CHAPTER 06  ·  DUA'
+          : 'CHAPTER ${chapterNumber.toString().padLeft(2, '0')}  ·  HADEES & BAITH',
       textAlign: TextAlign.center,
-      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, letterSpacing: 1),
+      style: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 1,
+      ),
     ),
   );
 }

@@ -10,6 +10,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "manqusmawlidpdf"
 OUTPUT = ROOT / "assets" / "pdf_pages"
+PNG_OUTPUT = ROOT / "assets" / "pdf_pages_png"
 
 PDFS = [
     (1, "Chapter 1.pdf"),
@@ -23,10 +24,13 @@ PDFS = [
 
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
+    PNG_OUTPUT.mkdir(parents=True, exist_ok=True)
     total = 0
     for chapter, filename in PDFS:
         chapter_dir = OUTPUT / f"chapter_{chapter}"
+        png_chapter_dir = PNG_OUTPUT / f"chapter_{chapter}"
         chapter_dir.mkdir(exist_ok=True)
+        png_chapter_dir.mkdir(exist_ok=True)
         document = pymupdf.open(SOURCE / filename)
         for page_number, page in enumerate(document, start=1):
             image = page.get_pixmap(matrix=pymupdf.Matrix(1.35, 1.35), alpha=False)
@@ -36,6 +40,11 @@ def main() -> None:
                 "WEBP",
                 quality=78,
                 method=6,
+            )
+            bitmap.save(
+                png_chapter_dir / f"page_{page_number:02d}.png",
+                "PNG",
+                optimize=True,
             )
             total += 1
         print(f"chapter {chapter}: {len(document)} pages")
