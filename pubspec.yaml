@@ -61,6 +61,7 @@ flutter:
     - reciter_bg.png
     - reciter_header_bg.png
     - thahatangal pic.png
+    - assets/content/chapters.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

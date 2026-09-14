@@ -1,0 +1,797 @@
+{
+  "language": "English",
+  "chapters": [
+    {
+      "chapter": 1,
+      "source": "1 Eng.xlsx",
+      "entries": [
+        {
+          "arabic": "سُبْحَانَ الَّذِي أَطْلَعَ فِي شَهْرِ رَبِيعِ اْلأَوَّلِ قَمَرَ نَبِيِّ الْهُدَى وَأَوْجَدَ نُورَهُ قَبْلَ خَلْقِ الْعَالَمِ وَسَمَّاهُ مُحَمَّدًا",
+          "english": "I glorify Allah (سبحانه وتعالى) the One who made the Moon to rise up, the prophet (ﷺ) who was sent as guidance to the people, during the month of Rabi’ul Awwal and He created prophet’s (ﷺ) light and named him as Muhammad (ﷺ) before the creation of the world."
+        },
+        {
+          "arabic": "وَأَخْرَجَهُ فِي آخِرِ الزَّمَانِ كَمَا قَدَّرَ وَأَبْدَى وَأَلْبَسَهُ خِلْعَةَ الْجَمَالِ الَّتِي لَمْ يُلْبِسْهَا أَحَدًا فَوُلِدَ بِوَجْهٍ أَخْجَلَ قَمَرًا وَفَرْقَدًا",
+          "english": "And He brought out him in the last era (as the last of all prophets) as He decided earlier and declared it in the Holy Scripts and then He (Allah) put on him with garments of beauty which were not put on anybody before him. Thus, He was born with a face which ashamed the moon and the Farqadh (The Star, situated in the northern part of the sky, often used by sailors during their navigation)"
+        },
+        {
+          "arabic": "أَلاَ هُوَ الَّذِي تَوَسَّلَ بِهِ آدَمُ عَلَيْهِ السَّلاَمُ وَافْتَخَرَ بِكَوْنِهِ وَالِدًا وَاسْتَغَاثَ بِهِ نُوحٌ عَلَيْهِ السَّلاَمُ فَنَجَى مِنَ الرَّدَى",
+          "english": "Yes, He (Muhammad) (ﷺ) is the one by whose status Adam (‘Alaihissalam) asked Allah, and Adam (‘Alaihissalam) was proud to be his father. And he is the one by whose baraka Nuh (‘Alaihissalam) sought help from Allah (During the flood) and thus he escaped from the destruction."
+        },
+        {
+          "arabic": "وَكَانَ فِي صُلْبِ إِبْرَاهِيمَ عَلَيْهِ السَّلاَمُ حِينَ أُلْقِيَ فِي النَّارِ فَعَادَ وَصَارَ لَهَـبُهَا مُخْمَدًا",
+          "english": "He (Muhammad ﷺ) had been in the backbone of Hazrat Ibrahim ‘Alaihissalam while he was put into the fire and he was back from the fire (safely) as the flames of the fire were put off wondrously"
+        },
+        {
+          "arabic": "وَرَأَتْ اُمُّهُ آمِنَةُ حِينَ حَمَلَتْ بِهِ مَلاَئِكَةَ السَّمَاءِ مَدَدًا وَدَخَل َعَلَيْهَا اْلأَنْبِيَاءُ وَهُمْ يَقُولُونَ لَهَا إِذَا وَضَعْتِ شَمْسَ اْلفَلاَحِ وَالْهُدَى فَسَمِّيهِ مُحَمَّدًا",
+          "english": "And when his mother Aminah (Radhiyallahu ‘anha) got  pregnant with the prophet (ﷺ), the angels of the Heaven came to help her, and the prophets (‘Alaihimussalam)  came to her saying ‘when you give birth to the (baby) ‘sun of victory and guidance’, please name him Muhammad (ﷺ).’"
+        },
+        {
+          "arabic": "قَالَ اللهُ عَزَّ وَجَلَّ لَقَدْ جَاءَكُمْ رَسُولٌ مِنْ أَنْفُسِكُمْ عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيصٌ عَلَيْكُمْ بِالْمُؤْمِنِينَ رَءُوفٌ رَّحِيمْ",
+          "english": "Allah says: “There has certainly come to you a Messenger from among yourselves. Grievous to him is what you suffer; [he is] concerned over you and to the believers is kind and merciful.”"
+        },
+        {
+          "arabic": "وَرُوِيَ عَنِ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَنَّهُ قَالَ كُنْتُ نُورًا بَيْنَ يَدَيِ اللهِ عَزَّ وَجَلَّ قَبْلَ أَنْ يَخْلُقَ آدَمَ عَلَيْهِ السَّلاَمُ بِأَلْفَيْ عَامٍ يُسَبِّحُ اللهَ ذَلِكَ النُّورُ وَتُسَبِّحُ الْمَلائِكَةُ بِتَسْبِيحِهِ",
+          "english": "And it is reported from the Prophet (ﷺ) (By Ibnu ‘Abbas (R) as recorded By Ibnu Asakir (R) and similar reports are narrated by Imam Twabrani and others) that the prophet (ﷺ) said, “I was a light in front of Allah (سبحانه وتعالى )  two thousand years before Adam ‘alaihissalam was created. This light had been glorifying Allah (سبحانه وتعالى) and angels also were glorifying Allah along with this Tasbeeh (glorifying) from this Nur”"
+        },
+        {
+          "arabic": "فَلَمَّا خَلَقَ اللهُ تَعَالَى آدَمَ عَلَيْهِ السَّلاَمُ أَلْقَى ذَلِكَ النُّورَ فِي طِينَتِهِ فَأَهْبَطَنِيَ اللهُ فِي صُلْبِ آدَمَ عَلَيْهِ السَّلاَمُ إِلَى اْلأَرْضِ",
+          "english": "When Allah (سبحانه وتعالى) created Adam ‘alaihissalam put that Nur in his clay then Allah sent down me to the earth through the backbone of Adam ‘alaihissalam."
+        },
+        {
+          "arabic": "وَجَعَلَنِي فِي السَّفِينَةِ فِي صُلْبِ نُوحٍ عَلَيْهِ السَّلاَمُ وَجَعَلَنِي فِي صُلْبِ الْخَلِيلِ إِبْرَاهِيمَ عَلَيْهِ السَّلاَمْ حِينَ قُذِفَ بِهِ فِي النَّارِ",
+          "english": "And He placed me on the backbone of Nuh (‘alaihissalam) in the ship and put me in the backbone of Khaleelullahi Ibrahim (‘alaihissalam) when he was thrown to the fire."
+        },
+        {
+          "arabic": "وَلَمْ يَزَلْ يَنْقُلُنِي رَبِّي مِنَ اْلأَصْلاَبِ الْكَرِيمَةِ الْفَاخِرَةِ إِلَى اْلأَرْحَامِ الزَّكِيَّةِ الطَّاهِرَةِ حَتَّى أَخْرَجَنِيَ اللهُ مِنْ بَيْنِ أَبَوَيَّ وَلَمْ يَلْتَقِيَا عَلَى سِفَاحٍ قَطّ.",
+          "english": "And thus, My Lord had been taking me through noble and delighted backbones - one by one -to the purified wombs. Allah (سبحانه وتعالى) brought out me from my parents very clean and pure in a sacred lineage\n[Note: All these events are seen reported in MUJMAUL KABEER for Imam Twabrani (4:213) and in MUSTADRAK (4:391) and in SEERATUL HALABIYYAH"
+        },
+        {
+          "arabic": "اَلصَّلَوةُ عَلَى النَّبِي وَالسَّلاَمُ عَلَى الرَّسُولْ",
+          "english": "Blessings from Allah be upon the Prophet (ﷺ), and peace be on the Messenger (ﷺ)"
+        },
+        {
+          "arabic": "اَلشَّفِيعِ الأَبْطَحِي وَالْحَبِيبِ الْعَرَبِي",
+          "english": "The intercessor (of the believers), the native of Makkah, the beloved of Allah, and the Arabian (all are among the names of the prophet (ﷺ)\nNb: - (‘Abtah’ means basin - shaped valley like Makkah. Makkah is referred by this word."
+        },
+        {
+          "arabic": "أَنْتَ تَطْلُعُ بَيْنَنَا فِي الْكَوَاكِبِ كَالْبُدُورِ",
+          "english": "You are shining amidst us like the full moon shines amidst the stars."
+        },
+        {
+          "arabic": "بَلْ وَأَشْرَفُ مِنْهُ يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "Nay, you are superior to that, oh my leader, the best of all prophets (ﷺ)"
+        },
+        {
+          "arabic": "أَنْتَ أُمٌّ أَمْ أَبٌ مَا رَأَيْنَا فِيهِمَا",
+          "english": "You are mother, or you are father? (you are above all). We didn’t see in them i.e. father and mother"
+        },
+        {
+          "arabic": "مِثْلَ حُسْنِكَ قَطُّ يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "Like your beauty, indeed, Oh my master, the best of prophets (ﷺ)."
+        },
+        {
+          "arabic": "أَنْتَ مُنْجِينَا غَدًا مِنْ شَفَاعَتِكَ الصَّفَا",
+          "english": "You are our saviour tomorrow, by your sacred shafa-a (intercession)."
+        },
+        {
+          "arabic": "مَنْ لَنَا مِثْلُكَ يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "Who is there for us like you, Oh my master, the best of all prophets (ﷺ)"
+        },
+        {
+          "arabic": "اِرْتَكَبْتُ عَلَى الْخَطَا غَيْرَ حَصْرٍ وَعَدَدْ",
+          "english": "I have committed countless sins."
+        },
+        {
+          "arabic": "لَكَ أَشْكُو فِيهِ يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "I express my helplessness and I am worried about how I face Allah. So, please help me by your shafa-a), oh my leader the best of all prophets (ﷺ)."
+        },
+        {
+          "arabic": "إِنَّنَا نَرْجُو إِلَى كَأْسِ حَوْضِكَ لِلْعَطَشْ",
+          "english": "We aspire towards your cup of Haudhul kauthar to get rid of our thirst.\n(Note: ‘Kauthar’ is a special river which is gifted to Rasulullah (swallahu ‘alaihi wasallam). It is whiter than milk and sweeter than honey. Whoever drinks it once he will never get thirst. May Allah bless all of us to drink it)"
+        },
+        {
+          "arabic": "يَوْمَ نَشْرِ كِتَابِي يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "The day when we take records of our deeds (in our hands) oh the best of all prophets (ﷺ)."
+        },
+        {
+          "arabic": "اَلشَّفَاَعَةَ هَبْ لَنَا فِى الْقِيَامَةِ مُشْفِقَا",
+          "english": "Please grant us ‘Shafa-a’ on the day of judgment, showing affection towards us"
+        },
+        {
+          "arabic": "وَاهْ لَناَ إِنْ ضَاعَ يَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "Woe to us ! (What a bad situation will be) if we do not receive it (shafa’a), Oh my leader, the best of prophets (ﷺ)."
+        },
+        {
+          "arabic": "اَلصَّلَوةُ عَلَى النَّبِي كُلَّ وَقْتٍ دَائِمَا",
+          "english": "May the blessings of Allah be upon the prophet (ﷺ) always, all the time."
+        },
+        {
+          "arabic": "لاَحَ نَجْمٌ فِي السَّمَا سَيِّدِي خَيْرَ النَّبِي",
+          "english": "For as long as the stars shine in the sky, Oh my leader, the best of prophets (ﷺ)."
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "source": "2 Eng.xlsx",
+      "entries": [
+        {
+          "arabic": "رَوَى كَعْبُ اْلأَحْبَارِ رَضِيَ اللهُ عَنْهُ لَمَّا أَرَادَ اللهُ تَعَالَى إِظْهَارَ النُّورِ الْمَخْزُونِ وَإِبْرَازَ الْجَوْهَرِ الْمَكْنُونِ مِنْ عَبْدِ اللهِ إِلَى بَطْنِ آمِنَةَ",
+          "english": "Ka`bul Ahbar radhiallahu anhu reports:\n(Note: He was a Tabie, (one of those who succeeded the Companions of Rasulullah (swahaba) and also one of the historians in the first Islamic century who learned more about the Testaments. He embraced Islam during the reign of the Caliph Umauru bnul Khattab (Radhiyallahu Anhu). He passed away in 32 H.)\n\nWhen Allah سبحانه وتعالى) wanted to reveal the Nur that was kept with great care and to bring out the hidden pearl from Abdullah (Radhiyallahu ‘Anhu) to the womb of Amina (Radhiyallahu ‘Anha)"
+        },
+        {
+          "arabic": "أَطْهَرِ فَتَاةٍ فِي الْعَرَبِ وَذَلِكَ فِي لَيْلَةِ الْجُمُعَةِ مِنْ شَهْرِ رَجَبٍ أَمَرَ رِضْوَانَ عليه السلام",
+          "english": "the purest lady amongst the Arabs, it was on a Friday night in the month of Rajab, Allah (سبحانه وتعالى) commanded Ridhwan (the Angel who is the Guard of Paradise)"
+        },
+        {
+          "arabic": "فَفُتِحَتْ أَبْوَابُ الْجِنَانِ وَتَزَيَّنَتِ الْحُورُ وَالْوِلْدَانُ وَدُقَّتْ بَشَائِرُ اْلأَفْرَاحِ وَزَهَرَتْ كَوَاكِبُ الصَّبَاحِ",
+          "english": "then the doors of paradise were opened. Hurs and Al-Wildnu-l- Mukhalladoon were adorned in the beauty and bells announcing the good news were tuned and morning stars started to shine.\n\nN;b-  Hurs are the heavenly girls with large eye and Al-Wildnu-l- Mukhalladoon are the handsome boys in the paradise who will be welcoming the believers in to the paradise. According to some scholars, they are special creations of Allah for the paradise and according to some, they are the children who were deceased before getting their period of puberty .We can see in many hadiths that these children will be waiting for their parents at the doors of paradise and they will request to Allah to send their parents with them and even it is reported that they would pull their parents into the paradise.)"
+        },
+        {
+          "arabic": "وَنَادَى مُنَادٍ فِي السَّمَاءِ وَاْلأَرْضِ أَلاَ إِنَّ النُّورَ الْمَكْنُونَ مِنْهُ سَيِّدُ الْبَشَرِ فِي بَطْنِ آمِنَةَ قَدِ اسْتَقَرَّ",
+          "english": "And one caller from Allah, announced in the heavens and earth “Yes, indeed the Nur (the light) in which the leader of mankind (ﷺ) is shielded has been placed in the belly/womb of Amina (Radhiyallahu ‘Anha).”"
+        },
+        {
+          "arabic": "وَلَمَّا انْتَقَلَ نُورُ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمْ مِنْ عَبْدِ اللهِ إِلَى بَطْنِ آمِنَةَ اِهْتَزَّ الْعَرْشُ طَرَبًا وَاسْتِبْشَارًا",
+          "english": "When this Nur of prophet muhammad (ﷺ) moved from Abdullah to the womb of Amina (Radhiyallahu ‘Anha), the ‘Arsh’ (a special creation of Allah which remarks His greatness) trembled with joy and pleasure."
+        },
+        {
+          "arabic": "وَزَادَ الْكُرْسِيُّ هَيْبَةً وَوَقَارًا وَامْتَلَئَتِ السَّمَاوَاتُ أَنْوَارًا وَضَجَّتِ الْمَلاَئِكَةُ تَهْلِيلاً وَاسْتِغْفَارَا",
+          "english": "And Kursiyy (special creation of Allah which is bigger than earth and heavens) increased in awe and dignity. The Heavens were filled with the special lights (Nur), and angels were reciting loudly Tahlil (La ilaha Illallah Muahammadu Rasulullah) and Istighfar (asking forgiveness from Allah)"
+        },
+        {
+          "arabic": "فَأَصْبَحَتْ آمِنَةُ فِي تِلْكَ اللَّيْلَةِ وَاْلأَنْوَارُ تَلُوحُ فِي جَبْهَتِهَا الْمُؤْتَمِنَة",
+          "english": "special lights were shining in the confident forehead of Amina (Radhiyallahu ‘Anha) throughout the night"
+        },
+        {
+          "arabic": "وَأَمِنَتْ بِهِ مِنَ الْمَخَاوِفِ الْكَامِنَةِ وَظَهَرَتْ لِانْتِقَالِ نُورِهِ اْلآيَاتُ وَتَبَاشَرَتْ بِهِ جَمِيعُ الْمَخْلُوقَاتِ",
+          "english": "She had no any fear of hidden dangers on him. The signs for the moving of his sacred ‘Nur’ were appeared and all creatures passed good news of him each other."
+        },
+        {
+          "arabic": "وَلَمَّا حَمَلَتْ بِهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمْ فِي رَجَبِ الْهَنَا بُشِّرَتْ فِي شَعْبَانَ بِنَيْلِ الْمُنَى وَقِيلَ لَهَا فِي رَمَضَانَ لَقَدْ حَمَلْتِ باِلْمُطَهَّرِ مِنَ الدَّنَسِ وَالْخَنَا",
+          "english": "When she became pregnant with Prophet (ﷺ), in the delightful month of Rajab, she was given the glad in the month of Sha’ban that her wishes were going to be fulfilled and she was told in the Ramadan, that she had got pregnant with a child who was completely purified from dirt and impurities"
+        },
+        {
+          "arabic": "وَسَمِعَتِ الْمَلَائِكَةَ فِي شَوَّالٍ يُبَشِّرُونَهَا بِالظَّفْرِ بِغَايَةِ الْمُنَا",
+          "english": "She heard the Angels in Shawwal giving her good news of winning her ultimate wish"
+        },
+        {
+          "arabic": "وَرَأَتِ الْخَلِيلَ إِبْرَاهِيمَ عَلَيْهِ السَّلاَمُ فِي ذِى الْقَعْدَةِ وَهُوَ يَقُولُ لَهَا أَبْشِرِي بِصَاحِبِ اْلأَنْوَارِ وَالْوَقاَرِ وَالسَّنَا",
+          "english": "She saw Hazrat Ibrahim alaihissalam in the month of Dhulqadah, saying to her, “be pleased to be blessed with the man (ﷺ) of lights, dignity and high status”"
+        },
+        {
+          "arabic": "وَأَتَاهَا فِي ذِي الْحِجَّةِ مُوسَى الْكَلِيمُ عَلَيْهِ السَّلاَمُ وَأَعْلَمَهَا بِرُتْبَةِ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَجَاهِهِ اْلأَسْنَى",
+          "english": "Hazrat Musa ‘alaihissalam came to her in Dhulhijjah and informed her about the status of the Prophet (ﷺ) and his high rank"
+        },
+        {
+          "arabic": "وَنَادَاهَا فِي مُحَرَّمٍ جِبْرِيلُ عَلَيْهِ السَّلاَمُ بِأَنَّ وَقْتَ وِلاَدَتِهَا قَد دَّنَا وَاصْطَفَّتِ الْمَلاَئِكَةُ مَنْزِلَهَا فِي صَفَرٍ",
+          "english": "Jibril ‘alaihissalam called her in Muharram telling her that the time for her delivery was very near. Angels lined up in her house in the month of Safar."
+        },
+        {
+          "arabic": "فَعَلِمَتْ أَنَّ مَوْعِدَ السُّرُورِ قَدْ قَرُبَ وَدَنَا فَلَمَّا هَلَّ رَبِيعُ اْلأَوَّلِ أَضَائَتِ اْلأَرْضُ وَالسَّمَا وَأَشْرَقَتِ الْبَيْتُ وَالصَّفَا",
+          "english": "Then she knew that the time of happiness has come very near. When the month of Rabiulawwal began; the earth and sky were shining in brightness, and the Holy Ka’aba and Swafa Mountain were illuminating"
+        },
+        {
+          "arabic": "ثُمَّ لَمَّا جَاءَ وَقْتُ الْوِلاَدَةِ وَخَرَجَ مَنْشُورُ السَّعَادَةِ وَجَدَّ بِآمِنَةَ أَمْرُ الْوِلآدَةِ",
+          "english": "And when the time of delivery came, the proclamation of success was out, the signs of delivery were getting strong in Amina (Radhiyallahu ‘Anha)"
+        },
+        {
+          "arabic": "وَحَانَ بُرُوزُ شَمْسِ السَّعَادَةِ تَلَأْلَأَ الْحَقُّ نُورًا أَضَاءَ وَنُشِرَتْ لَهُ فِي الْكَوْنِ أَعْلاَمُ الرِّضَى",
+          "english": "And the “sun of victory” was going to rise, the (light of) truth illuminated spreading light very far and the flags of appreciation were spread all over the universe"
+        },
+        {
+          "arabic": "وَ إِذَا بِطَائِرٍ أَبْيَضَ قَد سَّقَطَ مِنَ الْهَوَى فَمَرَّ بِجَنَاحَيْهِ عَلَى بَطْنِ آمِنَةَ مُسْرِعًا فَضَرَبَهَا الْمَخَاضُ لَيْلَةَ الِاثْنَيْنِ الثَّانِي عَشَرَ مِنْ شَهْرِ رَبِيعِ اْلأَوَّلِ وَوَلَدَتْ صَبِيحَتَهَا نَبِيَّ الثَّقَلَيْنِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينْ",
+          "english": "Suddently a white bird flew down and passed over the belly of Amina (Radhiyallahu ‘Anha) speedily stretching its wings. Then (as stated in Nurul Abswar-by Imam Suyuti Rahimahillahu) she began to feel labour pains on the eve of 12th Rabiul awwal and in the morning (of 12th Rabiul awwal), she gave birth to the prophet of mankind and the jinn. May Allah send his blessings upon him, and all of his family and companions."
+        },
+        {
+          "arabic": "يَا رَبِّ صَلِّ عَلَى النَّبِيِّ مُحَمَّدٍ",
+          "english": "O my Lord, send blessings upon Prophet Muhammad (ﷺ)"
+        },
+        {
+          "arabic": "مُنْجِي الْخَلاَئِقِ مِنْ جَهَنَّمَ فِي غَدٍ",
+          "english": "Saviour of all creatures from hell fire tomorrow"
+        },
+        {
+          "arabic": "وُلِدَ الْحَبِيبُ السَّيِّدُ الْمُتَعَبِّدُ",
+          "english": "The beloved, our leader and the great worshiper of Allah is born."
+        },
+        {
+          "arabic": "وَالنُّورُ مِنْ وَجَنَاتِهِ يَتَوَقَّدُ",
+          "english": "The special light is glittering from his cheeks."
+        },
+        {
+          "arabic": "جِبْرِيلُ نَادَى فِي مَنَصَّةِ حُسْنِهِ",
+          "english": "Jibril (‘Alaihissalam) called out from his stand of beauty"
+        },
+        {
+          "arabic": "هَذَا مَلِيحُ الْكَوْنِ هَذَا أَحْمَدُ",
+          "english": "This is Ahmad the handsome of the universe. (Ahmad is one of the Prophet’s (ﷺ) names)"
+        },
+        {
+          "arabic": "هَذَا كَحِيلُ الطَّرْفِ هَذَا المُصْطَفَى",
+          "english": "This is the one who was born with Kohl on his eyes, He is Mustafa (which means “the selected” another name for Rasulullah (ﷺ)"
+        },
+        {
+          "arabic": "هَذَا جَزِيلُ الْوَصْفِ هَذَا السَّيِّدُ",
+          "english": "This is the one wo have abundant characteristics, this is the leader"
+        },
+        {
+          "arabic": "هَذَا جَمِيلُ النَّعْتِ هَذَا الْمُرْتَضَى",
+          "english": "He is the bearer of nice character, he is Murtadha. (Murtadha is one of the names for the prophet (ﷺ) it means ‘the pleased one’)"
+        },
+        {
+          "arabic": "هَذَا مَلِيحُ الْوَجْهِ هَذَا اْلأَوْحَدُ",
+          "english": "He is the owner of sweet countenance; He is unique in all ways."
+        },
+        {
+          "arabic": "هَذَا الَّذِي خُلِعَتْ عَلَيْهِ مَلاَبِسٌ",
+          "english": "He is the one, who was put on with the valuable garments (of approvals from Allah)"
+        },
+        {
+          "arabic": "وَنَفَائِسٌ فَنَظِيرُهُ لاَ يُوجَدُ",
+          "english": "And many other precious things, so there is no one similar to him."
+        },
+        {
+          "arabic": "قَالَتْ مَلاَئِكَةُ السَّمَاءِ بِأَسْرِهِمْ",
+          "english": "All angels of the heaven said:"
+        },
+        {
+          "arabic": "وُلِدَ الْحَبِيبُ وَمِثْلُهُ لاَ يُولَدُ",
+          "english": "the Beloved of Allah is born, nobody be born again like him"
+        },
+        {
+          "arabic": "بُشْرَى لِأُمَّتِهِ بِرُؤْيَةِ وَجْهِهِ",
+          "english": "Glad news for his Ummah (who ever followed his message) to see his face"
+        },
+        {
+          "arabic": "هَذَا هُوَ الْجَاهُ الْعَظِيمُ اْلأَزْيَدُ",
+          "english": "This is really a supreme and great position"
+        },
+        {
+          "arabic": "وَلَدَتْهُ مَخْتُونًا وَمَكْحُولاً كَمَا",
+          "english": "She (Aminah Radhiyallahu ‘Anha) gave birth to him as circumcised and with Kohl on his eyes."
+        },
+        {
+          "arabic": "قَدْ جَاءَ فِي الْخَبَرِ الصَّحِيحِ الْمُسْنَدُ",
+          "english": "It is narrated in the authentic and recommended hadith"
+        },
+        {
+          "arabic": "صَلَّى عَلَيْكَ اللهُ يَا عَلَمَ الْهُدَى",
+          "english": "Oh, the flag of the guidance, May Allah (سبحانه وتعالى) bestow His blessings upon you."
+        },
+        {
+          "arabic": "مَا نَاحَ طَيْرٌ فِى الْغُصُونِ يُغَرِّدُ",
+          "english": "Whenever the birds sing on the branches of the trees."
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "source": "3 Eng.xlsx",
+      "entries": [
+        {
+          "arabic": "وَرُوِيَ أَنَّ آمِنَةَ رَأَتْ حِينَ وَضَعَتْهُ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نُورًا أَضَاءَ لَهُ قُصُورُ بُصْرَى مِنْ أَرْضِ الشَّامِ",
+          "english": "It was reported that when the Prophet (ﷺ) was given birth, Amina (Radhiyallahu ‘Anha) saw a very bright light, through which she could  watch the castles of Bosra (a town in Southern Syria) in  the region of ‘Sham’ (‘sham’ includes the areas of Syria, Jordan, Palestine and Lebanon reaching to the  borders of Saudi Arabia)"
+        },
+        {
+          "arabic": "وَ رُوِيَ أَنَّ آمِنَةَ قَالَتْ لَمَّا وَضَعْتُهُ مَدَدْتُ عَيْنِي لِأَنْظُرَ وَلَدِي فَلَمْ أَرَهُ ثُمَّ وَجَدْتُهُ فِي الْمِخْدَعِ وَهُوَ مَكْحُولٌ مَدْهُونٌ مَخْتُونٌ مَلْفُوفٌ بِثَوْبٍ مِنَ الصُّوفِ اْلأَبْيَضِ أَلْيَنَ مِنَ الْحَرِيرِ يَفُوحُ الطِّيبُ مِنْ جَنَابِهِ",
+          "english": "And It is reported that Amina (Radhiyallahu ‘Anha) said: “When I gave birth to Rasulullah (ﷺ), I eagerly looked to see my baby but I could not see him. Then after a while I found him in the bedchamber and he was with Kohl on his eyes, covered with oil, circumcised and wrapped in a white cotton cloth which was softer than silk and a nice fragrance was spreading from his side"
+        },
+        {
+          "arabic": "فَجَعَلْتُ أَنْظُرُ إِلَيْهِ وَإِذَا مُنَادٍ يُنَادِي أَخْفُوهُ عَنْ أَعْيُنِ النَّاسِ قَالَتْ فَمَا كَانَ غَيْبَتُهُ وَحُضُورُهُ إِلاَّ  كَلَمْحِ الْبَصَرِ",
+          "english": "I kept looking on him. Suddenly, a caller was calling out please hide him from the eyes of the people. Amina (radhiyallahu anha says: suddenly, the baby disappeared from my eyes and soon he was found in front of me. All it happened in the blink of an eye"
+        },
+        {
+          "arabic": "وَلَمَّا كُنْتُ مُتَحَيِّرَةً مِنْ ذَلِكَ إِذَا بِثَلاَثَةِ نَفَرٍ قَد دَّخَلُوا عَلَيَّ كَأَنَّ وُجُوهَهُمْ أَقْمَارٌ وَفيِ يَدِ أَحَدِهِمْ إِبْرِيقٌ مِنَ الْفِضَّةِ وَمَعَ اْلآخَرِ طَشْتٌ مِنَ الزَّبَرْجَدِ اْلأَخْضَرِ وَفِي يَدِ الثَّالِثِ حَرِيرَةٌ بَيْضَاءُ مَطْوِيَّةٌ فَنَشَرَهَا فَإِذَا هِيَ خَاتَمٌ يُحَيِّرُ أَعْيُنَ النَّاظِرِينَ مِنْ شِدَّةِ  نُورِهِ",
+          "english": "While I was very surprised by this, a group of three came to me, their faces were looking like the moon. There was a silver jug in one’s hand, and a washbowl of green aquamarine with another one, and there was folded white silk in the third one’s hand.  he spread it. Then There was a seal (referring to the end of the chain of prophets and messengers (Alaihimussalam) with prophet Muhammad (swallallahu ‘alaihi wasallam) astonishing the sights of viewers, by its brightness.\n\nNote: It was predicted in Tourat and Injiel, that the Prophet (ﷺ) would be born with this seal. So, many of the scholars of these two books, embraced Islam, seeing this seal and other signs mentioned in their books."
+        },
+        {
+          "arabic": "حَمَلَ ابْنِي وَنَاوَلَهُ لِصَاحِبِ الطَّشْتِ وَأَنَا أَنْظُرُ إِلَيْهِ فَغَسَلَهُ مِنْ ذَلِكَ الْمَاءِ الَّذِي فِي اْلإِبْرِيقِ سَبْعَ مَرَّاتٍ ثُمَّ قَالَ لِصَاحِبِهِ اخْتِمْ بَيْنَ كَتِفَيهِ بِخَاتَمِ النُّبُوَّةِ فَهُوَ خَاتِمُ النَّبِيِّينْ وَسَيِّدُ أَهْلِ السَّمَاوَاتِ وَاْلأَرْضِ أَجْمَعِينْ",
+          "english": "He carried my son and passed my son to the holder of washbowl while I was looking to him, then he washed him seven times using the water in the jug. Then he told his colleague: seal in between his two shoulders the seal of Khatamunnubuwwah (i.e. the sign of the last prophethood), because he is the last of all prophets and the leader of all those in the heavens and in the earth."
+        },
+        {
+          "arabic": "وَقِيلَ لَمَّا وُلِدَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ خَمَدَت تِّلْكَ اللَّيْلةَ نَارُ فَارِسَ بَعْدَ الضِّرَامِ وَلَمْ تَكُنْ خَمَدَتْ قَبْلَ ذَلِكَ بِأَلْفَيْ عَامٍ",
+          "english": "It is reported, that the fire of Persia became extinguished in the night of the birth of the Prophet (ﷺ) after it had been burning for several years and this fire had never been extinguished for two thousand years preceding that day."
+        },
+        {
+          "arabic": "وَارْتَجَّ إِيوَانُ كِسْرَى وَسَقَطَتْ مِنْهُ أَرْبَعَ عَشَرَ شُرْفَةً وَغَاضَتْ بُحَيْرَةُ سَاوَةَ وَأَصْبَحَتْ أَصْنَامُ الدُّنْيَا كُلُّهَا مَنْكُوسَةً وَرُمِيَتِ الشَّيَاطِينُ مِنَ السَّمَاءِ بِالشُّهُبِ الثَّوَاقِبِ وَانْبَلَجَ صُبْحُ الْحَقِّ وَبَطَلَ مَا كَانَ يَعْمَلُهُ كُلُّ كَاذِبٍ",
+          "english": "The palace of Kisra trembled, fourteen of its terraces fell down, the Pond of Sawa (town in old Persia currently Iran) dried up, all idols in the world were inverted, Satans were thrown from the doors of heavens by sharpened flame sticks, and the dawn of truth was exposed to all. And All the false practices were proved to be not relevant"
+        },
+        {
+          "arabic": "وَرُوِيَ عَنْ يَحْيَي بْنِ عُرْوَةَ (رَضِيَ اللهُ عَنْهُ) أَنَّ نَفَرًا مِنْ قُرَيْشٍ كَانُوا عِنْدَ صَنَمٍ مِنْ أَصْنَامِهِمْ قَدِ اتَّخَذُوا ذَلِكَ الْيَوْمَ عِيدًا مِنْ أَيَّامِهِمْ يَنْحَرُونَ فِيهِ الْجَزُورَ وَيَأْكُلُونَ وَيَشْرَبُونَ وَقَدْ عَكَفُوا عَلَيْهِ يَخُوضُونَ وَيَلْعَبُونَ",
+          "english": "It was reported by Yahya bin ‘Urwa (Grandson of Zubair bin Awwam) that a group of Quraish were sitting with an idol for them, celebrating one of their Festivals, slaughtering the camels, eating and drinking and they were fully dedicated in playing and enjoying on it."
+        },
+        {
+          "arabic": "فَدَخَلُوا عَلَيْهِ فَوَجَدُوهُ مَكْبُوبًا عَلَى وَجْهِهِ فَأَنْكَرُوا عِنْدَ ذَلِكَ عَلَيْهِ وَرَدُّوهُ إِلَى حَالِهِ فَانْقَلَبَ انْقِلاَبَ صَاغِرٍ فَفَعَلُوا ذَلِكَ ثَلاَثًا وَهُوَ لاَيَسْتَقِيمُ",
+          "english": "When they entered into its presence, they found it fallen on its face. It was unbelievable for them. They re-established it as it was before. but it again turned down like someone falls humiliated. they did it three times, but it was not getting straight."
+        },
+        {
+          "arabic": "فَلَمَّا رَأَوْا ذَلِكَ أَبْدَوْا حُزْنًا وَتَأَلُّمًا وَأَصْبَحَ الْعِيدُ الَّذِي كَانُوا فِيهِ مَأْتَمًا فَقَالَ عُثْمَانُ بْنُ الْحُوَيْرِثِ مَا لَهُ قَدْ أَكْثَرَ التَّنَكُّسَ إِنَّ هَذَا لِأَمْرٍ حَدَثَ وَأَنْشَدَ وَقَلْبُهُ يَصْلَى بِالنَّارِ",
+          "english": "when they saw all what happened, they exposed their sadness and sorrows, and celebration became mourning, then ‘Uthman bn ul Huwarith (their leader) said: what happened to this idol. Many times, it keeps falling down! Surely, this is because of an incident just happened, and he began to sing, while his heart was burning with anger."
+        },
+        {
+          "arabic": "صَلَوةٌ وَتَسْلِيمٌ وَأَزْكَى تَحِيَّةٍ",
+          "english": "Blessings, salutations, peace and greater greetings be"
+        },
+        {
+          "arabic": "عَلَى الْمُصْطَفَى الْمُخْتَارِ خَيْرِ الْبَرِيَّةِ",
+          "english": "Upon Mustwafal Mukhtar(ﷺ), the noblest man of all creatures\n(Note: Mustwafa and Mukhtar both mean “the Selected”)"
+        },
+        {
+          "arabic": "أَيَا صَنَمَ الْعِيدِ الَّذِي صَفَّ حَوْلَهُ",
+          "english": "Oh, swanamul Eid, (an idol of celebration) which is lined by (surrounded)"
+        },
+        {
+          "arabic": "صَنَادِيدُ مِنْ وَفْدٍ بَعِيدٍ وَمِنْ قُرْبِ",
+          "english": "Chiefs of delegations from far and near."
+        },
+        {
+          "arabic": "تَنَكَّسْتَ مَقْلُوبًا فَمَا ذَاكَ قُلْ لَنَا",
+          "english": "You inverted upside down, what happened? please tell us"
+        },
+        {
+          "arabic": "فَمِنْ حُزْنِنَا قَد دَّرَّتِ الْعِيرُ بِالسُّحُبِ",
+          "english": "because of our sorrow, tears are flowing like rain by which the caravan also may flow away"
+        },
+        {
+          "arabic": "فَإِنْ كُنْتَ مِنْ ذَنْبٍ أَتَيْنَا فَإِنَّنَا",
+          "english": "If you have fallen due to any sin which we have committed, then"
+        },
+        {
+          "arabic": "نَبُوءُ بِإِقْرَارٍ وَنَلْوِي عَنِ الذَّنْبِ",
+          "english": "We regret, and turn away from those sins."
+        },
+        {
+          "arabic": "وَإِنْ كُنْتَ مَغْلُوبًا وَنُكِّسْتَ صَاغِرًا",
+          "english": "If you are defeated and inverted in disgrace"
+        },
+        {
+          "arabic": "فَمَا أَنْتَ فِي اْلأَوْثَانِ بِالسَّيِّدِ الرَّبِّ",
+          "english": "Then you are not master god among the idols"
+        },
+        {
+          "arabic": "تَرَدَّى لِمَوْلُودٍ أَضَاءَتْ بِنُورِهِ",
+          "english": "Declined because of a new born baby, by whose light has lighted up"
+        },
+        {
+          "arabic": "جَمِيعُ فِجَاجِ اْلأَرْضِ خَوْفًا مِنَ الرُّعْبِ",
+          "english": "Every path of the earth being frightened by the glory of that moment."
+        },
+        {
+          "arabic": "وَنَارُ جَمِيعِ الْفُرْسِ قَدْ خَمِدَتْ لَهُ",
+          "english": "The fire for Persians (the Persians were worshipping fire) was extinguished because of him."
+        },
+        {
+          "arabic": "وَقَدْ بَاتَ شَاهُ الْفُرْسِ فِي أَعْظَمِ الْكَرْبِ",
+          "english": "And the Persian king spent whole the night in extreme difficulties."
+        },
+        {
+          "arabic": "فَيَا لَقُصَيٍّ ارْجِعُوا عَنْ ضَلاَلِكُمْ",
+          "english": "Oh, Tribe of Alu-Qusay! Return from your going astray"
+        },
+        {
+          "arabic": "وَهُبُّوا إِلَى اْلإِسْلاَمِ وَالْمَنْزِلِ الرَّحْبِ",
+          "english": "And hurry to Islam, and this wide and convenient house for all."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "source": "4 Eng.xlsx",
+      "entries": [
+        {
+          "arabic": "قَالَ ابْنُ إِسْحَاقَ (رَضِيَ اللهُ عَنْهُ) لَمَّا كَانَ الْيَوْمُ السَّابِعُ ذَبَحَ عَنْهُ جَدُّهُ عَبْدُ الْمُطَّلِبِ وَقَامَ بِأَمْرِهِ كَمَا يَجِبُ وَدَعَى قُرَيْشًا وَأَطْعَمَهُمْ وَأَكْرَمَهُمْ فَلَمَّا أَكَلُوا قَالُوا يَا عَبْدَ الْمُطَّلِبِ مَا سَمَّيْتَ ابْنَكَ قَالَ سَمَّيْتُهُ مُحَمَّدًا فَقَالوُا قَدْ رَغِبْتَ عَنْ أَسْمَاءِ آبَائِكَ قَالَ أَرَدْتُّ أَنْ يَحْمَدَهُ مَنْ عَلَى الْغَبْرَاءِ",
+          "english": "Muhammad Ibnu Ishaq (R) (H-85-H 151) says in his book (The history of the Messenger of Allah (ﷺ) سيرة رسول الله)\nN:b- He is believed to be the first Arab historian and biographer and he was the first one to write the biography of the prophet Muhammad (swallahu alaihi wasallam) (The history of the Messenger of Allah (ﷺ) سيرة رسول الله\n- which was compiled by him, is one of the most famous works on Rasulullahi (ﷺ))\n-----------------\nOn the seventh day of his birth, his grandfather Abdul Muttalib slaughtered for him, did all matters on its importance and he invited the Quraish and gave them nice hosting with delicious food.\nAfter having their meal, they asked Abdul Muttalib: What name you have given for your son (grandson). He replied, “I have named him ‘Muhammad’. They told him, “you have disapproved the names of your forefathers?” He said, “I wanted that all on the earth would praise him."
+        },
+        {
+          "arabic": "مُحَمَّدًا سَمَّوْا نَبِيَّ الْهُدَى",
+          "english": "They named the Prophet of Guidance as Muhammad (ﷺ)"
+        },
+        {
+          "arabic": "وَهُوَ أَحَقُّ النَّاسِ بِالْحَمْدِ",
+          "english": "He is the most deserving the praise among the people."
+        },
+        {
+          "arabic": "صَلَّى عَلَيْهِ اللهُ مَا أَشْرَقَتْ",
+          "english": "May Allah bestow His blessings upon him as long as shines"
+        },
+        {
+          "arabic": "شَمْسُ الضُّحَى فِي ذَلِكَ السَّعْدِ",
+          "english": "The morning sun on the morning star"
+        },
+        {
+          "arabic": "فَلَمَّا كَانَ وَقْتُ ظُهُورِ أَسْرَارِهِ وَإِشْرَاقُ الْكَوْنِ بِأَنْوَارِهِ فَبَيْنَمَا آمِنَةُ فِي بَيْتِهَا وَحِيدَةٌ مُسْتَأْنِسَةٌ بِبَرَكَاتِهِ وَهِيَ فَرِيدَةٌ وَلَمْ تَشْعُرْ إِلاَّ وَقَدْ أَشْرَقَ فِي بَيْتِهَا النُّورُ وَعَمَّهَا الْفَرَحُ وَالسُّرُورُ وَأَقْبَلَتِ الْمَلاَئِكَةُ وَالْحُورُ وَحَفَّ حُجْرَتَهَا أَنْوَاعُ الطُّيُورِ وَهِيَ تَسْمَعُ لِازْدِحَامِهِمْ وَاحْتِفَالِهِمْ بِقُدُومِ الْحَبِيبِ هَمْسًا وَكَيْفَ لاَ وَسَيِّدُ الْعَالَمِينَ فِي بَيْتِهَا أَمْسَى",
+          "english": "When it was the time for the appearance of his secrets and lightening of the universe with his lights, Amina (Radhiyallahu ‘Anha) was alone paying attentions to his blessings and nobody was there. She didn`t feel anything except that there was a light shining in her house, she was fully caught by the pleasure and happiness, and Angels and Hur E`en (unique beautiful girls from heaven with large eyes) came there, different types of birds surrounded her room, she heard their rushing and celebration on the coming of the prophet (ﷺ). How could this not be the case as the leader of the entire world (ﷺ) had been born in the house of Amina (Radhiyallahu Anha)."
+        },
+        {
+          "arabic": "صَلِّ رَبَّ الْعَالَمِينَ عَلَى",
+          "english": "O, Lord of all the worlds, bestow blessings upon"
+        },
+        {
+          "arabic": "سَيِّدِ الْكَوْنَيْنِ وَالسُّرُجِ",
+          "english": "The leader of both worlds and all lights (ﷺ)"
+        },
+        {
+          "arabic": "إِنَّ بَيْتًا أَنْتَ سَاكِنُهُ",
+          "english": "Verily, the house where you (ﷺ) stay"
+        },
+        {
+          "arabic": "لَيْسَ مُحْتَاجًا إِلَى السُّرُجِ",
+          "english": "It does not need lamps"
+        },
+        {
+          "arabic": "وَجْهُكَ الْوَضَّاحُ حُجَّتُنَا",
+          "english": "Your brightened face will be our proof"
+        },
+        {
+          "arabic": "يَوْمَ يَأْتِي النَّاسُ بِالْحُجَجِ",
+          "english": "On the day (i.e. judgment day) when people have to produce evidences."
+        },
+        {
+          "arabic": "وَمَرِيضًا أَنْتَ زَائِرُهُ",
+          "english": "If you (ﷺ) visited a sick man"
+        },
+        {
+          "arabic": "قَدْ أَتَاهُ اللهُ بِالْفَرَجِ",
+          "english": "Surely Allah would give him the cure"
+        },
+        {
+          "arabic": "فَازَ مَنْ قَدْ كُنْتَ بِغْيَتَهُ",
+          "english": "The one, whose ambition is you, has really won"
+        },
+        {
+          "arabic": "وَسَمَا فِي أَرْفَعِ الدَّرَجِ",
+          "english": "And he is raised to the highest rank."
+        },
+        {
+          "arabic": "بَاذِلاً فِي الْحُبِّ مُهْجَتَهُ",
+          "english": "Giving his life in this love"
+        },
+        {
+          "arabic": "سَامِحًا بِالرُّوحِ وَالْمُهَجِ",
+          "english": "Dedicating his soul and life"
+        },
+        {
+          "arabic": "يَا كَرِيمَ الْجُودِ رَاحَتَهُ",
+          "english": "Oh, the man of generosity"
+        },
+        {
+          "arabic": "فَكَفَيْتَ الْبَحْرَ وَاللُّجَجِ",
+          "english": "You have exceeded in charity the seas and oceans."
+        },
+        {
+          "arabic": "أَنْتَ مُنْجِينَا مِنَ الْحُرَقِ",
+          "english": "You are our saviour from the burning fires."
+        },
+        {
+          "arabic": "مِنْ لَهِيبِ النَّارِ وَاْلأَجَجِ",
+          "english": "From the flames of hell and from the extreme heat of the hell."
+        },
+        {
+          "arabic": "ذَنْبُنَا مَاحِي لَيَمْنَعُنَا",
+          "english": "O Mahee (ﷺ), our sins prevent us\n(Note: Mahee is another name of the Prophet ﷺ, it means remover or eraser)"
+        },
+        {
+          "arabic": "مِنْ ذُرُوفِ الدَّمْعِ وَالْعَجَجِ",
+          "english": "from shedding tears and its larger flowing"
+        },
+        {
+          "arabic": "حُبُّكُمْ فِي قَلْبِنَا مَحْوٌ",
+          "english": "The sincere love towards you has moved out from our hearts"
+        },
+        {
+          "arabic": "مِنْ رَئِينِ الذَّنْبِ وَالْحَرَجِ",
+          "english": "Because of the stain of the sin and wickedness"
+        },
+        {
+          "arabic": "صَبُّكُمْ وَاللهِ لَمْ يَخِبْ",
+          "english": "By Allah, your (ﷺ) fervent lover would not fail"
+        },
+        {
+          "arabic": "لِكَمَالِ الْحُسْنِ وَالْبَهَجِ",
+          "english": "Because of the perfection of the beauty and pleasure (in loving you(ﷺ)"
+        },
+        {
+          "arabic": "إنَّنَا نَرْجُو لِشَافِعِنَا",
+          "english": "We look hopefully towards our intercessor (ﷺ) (for his shafa-a)"
+        },
+        {
+          "arabic": "لِصَلاَحِ الدِّينِ وَالنَّهَجِ",
+          "english": "For the goodness of religion and our way of life"
+        },
+        {
+          "arabic": "وَهُوَ نَجَّانَا مِنَ الْبَلْوَى",
+          "english": "He (ﷺ) is the one who saved us from the danger of (disbelief)"
+        },
+        {
+          "arabic": "طِيبُهُ فِى الْعَالَمِ اْلأَرَجِ",
+          "english": "His (ﷺ) fragrance has spread all over   the world"
+        },
+        {
+          "arabic": "رَبِّ وَارْزُقْنَا زِيَارَتَهُ",
+          "english": "O, Allah, make way for us to visit him (ﷺ) (ziyarah to Madeenah)"
+        },
+        {
+          "arabic": "قَبْلَ قَبْضِ الرُّوحِ وَالْخَرَجِ",
+          "english": "Before taking our soul and death"
+        },
+        {
+          "arabic": "صَلِّ يَا رَبِّ عَلَى الْهَادِي",
+          "english": "Oh Allah, bestow Your blessings upon the Guide (ﷺ)"
+        },
+        {
+          "arabic": "لِسَبِيلِ الْحَقِّ وَالْفَرَجِ",
+          "english": "To the way of truth and relief."
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "source": "5 eng.xlsx",
+      "entries": [
+        {
+          "arabic": "قَالَ عَلِيُّ بْنُ زَيْدٍ رَحِمَهُ اللهُ تَعَالَى كَانَ إِلَى جَانِبِي رَجُلٌ ذِمِّيٌّ وَكُنْتُ فيِ شَهْرِ رَبِيعِ اْلأَوَّلِ أَدْعُو الْفُقَرَاءَ وَأَعْمَلُ مَوْلِدًا لِلنَّبِيِّ صَلَّى اللهُ علَيْهِ وَسَلَّمَ فَقَالَ لِي ذَلِكَ الذِّمِّيُّ لِمَ تَفْعَلُ فيِ هَذَا الشَّهْرِ دُونَ غَيْرِهِ فَقُلْتُ فَرَحًا بِمَوْلِدِ رَسُولِ اللهِ صلَّى اللهُ عَلَيْهِ وَسَلَّمَ لِأَنَّهُ وُلِدَ فِي هَذَا الشَّهْرِ فَجَعَلَ يَهْزَؤُ بِي فَعَزَّ عَلَيَّ ذَلِكَ وَوَجَدْتُ مِنْ ذَلِكَ أَمْرًا عَظِيمًا",
+          "english": "Aliyyu bin Zaid (may Allah (سبحانه وتعالى) grant him His mercy) said:\n-------------\n(Note: Aliyyu bin Zaid (R) (Died in 131 H) was one of the scholars among Tabi’een (Tabi’een are the Generation who were preceded by the generation of prophet (ﷺ)’s companions(‘Swahaba’)\n---------------------\n“There was a Dzimmy (a non-Muslim who stays with full protection in an Islamic republic) staying beside me. I used to invite poor people in the month of Rabeeul awwal and celebrate the birthday of the Prophet swallallahu alaihi wasallam. He asked me, ‘why do you do this in this month and and not in others?’. I said, “Because of my happiness on the birth of the Messenger (ﷺ), as he was born in this month.” Then he (the Dzimmy) began to laugh at me and I was very hurt."
+        },
+        {
+          "arabic": "فَلَمَّا نِمْتُ فِي تِلْكَ اللَّيْلَةِ رَأَيْتُ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فِي الْمَنَامِ فَقَالَ مَابِكَ فَأَخْبَرْتُهُ بِخَبَرِي مَعَ الذِّمِّيِّ فَقَالَ لاَ تَحْزَنْ فَإِنَّهُ يَأْتِي إِلَيْكَ غَدًا وَهُوَ مُؤْمِنٌ",
+          "english": "When I fell asleep in that night, I had a vision of the holy Prophet (ﷺ) in the dream.  He asked me, “any problem?”. I explained to him (ﷺ) my experience with the ‘Dzimmiy’. Then He told me, “Do not worry, he will come tomorrow to you as a believer.”"
+        },
+        {
+          "arabic": "When I fell asleep in that night, I had a vision of the holy Prophet (ﷺ) in the dream.  He asked me, “any problem?”. I explained to him (ﷺ) my experience with the ‘Dzimmiy’. Then He told me, “Do not worry, he will come tomorrow to you as a believer.”",
+          "english": "He (Aliyyubnu zaid (R) said, “then I woke up and my eagerness was increasing, as I had been waiting for fulfilment of the promise of Rasulullah (ﷺ) to me, and there were tears flowing down through my cheeks”. Here is someone knocking at the door! The Dzimmy was there -saying, “Please open the door, stains in my heart have been removed, if the Prophet (ﷺ) was with you once, he was with me last night!”"
+        },
+        {
+          "arabic": "قَالَ فَفَتَحْتُ لَهُ الْبَابَ فَدَخَلَ وَهُوَ يَقُولُ لاَإِلَهَ إِلاَّ اللهُ مُحمَّدٌ رَّسُولُ اللهِ فَقُلْتُ مَا شَأْنُكَ قَالَ رَأَيْتُ اللَّيْلَةَ رَجُلا ًحَسَنَ الْوَجْهِ طَيِّبَ الرَّائِحَة ِعَظِيمَ الْهَيْبَةِ أَزَجَّ الْحَاجِبَيْنِ سَهْلَ الخَدَّيْنِ إِذَا تَكَلَّمَ فَعَلَيْهِ الْبَهَاءُ وَإِذَا صَمَتَ فَعَلَيْهِ الْوَقَارُ حُلْوُ الْمَنْطِقِ إِذَا طَلَعَ تَقُولُ هَذَا الْبَدْرُ الْمُنِيرُ وَإِذَا مَشَى يَفُوحُ مِنْهُ الْمِسْكُ وَالْعَنْبَرُ مَا أَحْسَنَ وَجْهَهُ وَمَا أَطْيَبَ رَائِحَتَهُ فَأَرَدْتُّ أَنْ أُقَبِّلَ يَدَيْهِ قَالَ أَتُقَبِّلُ يَدِي وَأَنْتَ عَلَى غَيْرِ دِينِي",
+          "english": "He (‘Aliyyubnu Zaid) said: I opened the door for him. He entered uttering La ilahaha Illallahu Muhammadu Rasulullah (ﷺ) (there is no God but Allah and Muhammad (ﷺ) is His Messenger). I asked, “What happened to you?” He replied “I saw last night a man with a handsome face, who smelt very nice, bearing a reverential countenance, with long slim eyebrows, and with good shaped cheeks. When he spoke, his face shone and when he was silent, he looked very magnificent. He speaks in very sweet manner. When he appears you would say, “This is the shining full moon.” When he walks, the smell of musk and ambergris: a fragrance) emanated from him. Oh, what a beautiful face it was! What a nice smell it was! Then I wanted to kiss his hands. He (ﷺ) asked me, “you kiss my hands while you are not in my religion?”"
+        },
+        {
+          "arabic": "فَقُلْتُ مَنْ أَنْتَ الَّذِي مَنَّ اللهُ عَلَيَّ بِكَ قَالَ أَنَا الَّذِي أُرْسِلْتُ رَحْمَةً لِلْعَالَمِينْ أَناَ سَيِّدُ الْأَوَّلِينَ وَالْآخِرِينْ أَنَا مُحَمَّدٌ خَاتِمُ النَّبِيِّينَ وَرَسُولُ رَبِّ الْعَالَمِينْ فَقُلْتُ لاَ إِلَهَ إلاَّ اللهُ مُحَمَّدٌ رَّسُولُ اللهِ فَفَتَحَ يَدَيْهِ وَعَانَقَنِي ثُمَّ قَالَ هَذِهِ الْجَنَّةُ وَذَاكَ الْقَصْرُ لَكَ فَقُلْتُ مَا عَلاَمَةُ ذَلِكَ قَالَ أَنْ تَمُوتَ غَدًا قَالَ صَاحِبُ الْحِكَايَةِ فَبَيْنَمَا هُوَ يُحَدِّثُنِي وَإِذَا بِالْبَابِ يُطْرَقُ وَقَائِلٌ يَقُولْ",
+          "english": "I asked, “Who are you, with whom (in this meeting) Allah has blessed me? Then he (the Prophet (ﷺ) said “I am the one who has been sent as a mercy to all worlds, I am the leader of those who came first and those who will come last, I am Muhammad (ﷺ), last of all prophets and the messenger of the lord of the worlds.” Then I uttered, “Lailahaha illallahu Muhammadurrasulullah”. Then he opened his arms and hugged me, saying that “This heaven and that palace are for you.” I asked him (ﷺ) what is the sign for it. He said “It is that You would die tomorrow.”\n(‘Aliyyu bnu zaid (R) says) while the Dzimmy was talking with him, there was a knocking on the door and someone was saying"
+        },
+        {
+          "arabic": "إِنْ كُنْتَ أَنْتَ حَظِيتَ يَوْمًا بِاللِّقَا",
+          "english": "If you were granted on a day a chance to cast a glance on the Prophet (ﷺ)"
+        },
+        {
+          "arabic": "زَالَ الْجَفَا عَنَّا وَقَدْ زَالَ الشَّقَا",
+          "english": "The failure and separation that we had, have been moved out (we have also won it now)"
+        },
+        {
+          "arabic": "فَقُلْتُ لَهُ مَنْ هَؤُلاَءِ قَالَ زَوْجَتِي وَابْنَتِي قَالَ فَدَخَلَتاَ وَهُمَا تَقُولاَنِ لاَ إِلَهَ إِلاَّ اللهُ مُحَمَّدٌ رَّسُولُ اللهِ فَقَالَ لَهُمَا كَيْفَ إِيمَانُكُمَا قَالَتَا رَأَيْنَاهُ كَمَا رَأَيْتَ رَأْيَ عَيْنٍ وَإِنْ كَانَ وَعَدَكَ بِقَصْرٍ فَقَدْ وَعَدَنَا بِقَصْرَيْنِ قَالَ فَمَاتَ الرَّجُلُ فِي الْوَقْتِ وَفِي الْغَدِ مَاتَتِ ابْنَتُهُ وَفِي الْيَوْمِ الثَّالِثِ مَاتَتْ زَوْجَتُهُ رَحِمَهُمُ اللهُ تَعَالَى وَرَحِمَنَا مَعَهُمْ اَلْحَمْدُ لِلَّهِ الَّذِي جَعَلَنَا مِنْ أُمَّةِ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمْ كُلَّمَا ذَكَرَهُ الذَّاكِرُونْ وَغَفَلَ عَنْ ذِكْرِهِ الْغَافِلُونْ",
+          "english": "I asked him who were those people? He said, “My wife and my daughter.” ‘Aliyyubnu Zaid (R) says: “They entered uttering Lailaha Illallahu Muhammadu Rasulullahi (There is no God but Allah, And Muhammad (ﷺ) is His Messenger)”. He asked both of them. What is the reason for your believing? They said, “We also saw the Prophet (ﷺ) (in our dreams) as you had before. If he had promised you one palace, he has promised us two palaces.” Aliyyubnu Zaid (R) said “The man died immediately, the next day his daughter died, and on the third day his wife also passed away. May Allah grant His mercy upon them and upon us.” All praises belong to Allah who made us in the Ummah of Prophet Muhammad (ﷺ) as long as reciters of dhikr are reciting His dhikr (in his remembrance) and as long as the heedless are forgetting His remembrance."
+        },
+        {
+          "arabic": "اَللهْ وَلِي اَللهْ وَلِي نِعْمَ الْوَلِي",
+          "english": "Allah SWT is The Guardian. He is the best Guardian."
+        },
+        {
+          "arabic": "صَلُّوا عَلَى هَذَا النَّبِيِّ مُحَمَّدٍ",
+          "english": "Please Send Swalawat upon this Prophet Muhammad (ﷺ)"
+        },
+        {
+          "arabic": "أَحْيَي رَبِيعَ الْقَلْبِ شَهْرَ الْمَوْلِدِ",
+          "english": "have made alive the spring of heart, The month of Maulid (Rabiul Awwal)"
+        },
+        {
+          "arabic": "كُلُّ اْلأَنَامِ بِذِكْرِ مَوْلِدِ أَحْمَدِ",
+          "english": "all the people with the remembrance of prophet Muhammad (ﷺ)’s birth (Ahmad   is the second name for the prophet (ﷺ)"
+        },
+        {
+          "arabic": "جَاءَتْ لِمَوْلِدِهِ الشَّرِيفِ بَشَائِرٌ",
+          "english": "In the respect of his (ﷺ) great birthday, there had occurred many happy good news."
+        },
+        {
+          "arabic": "وَخَوَارِقُ الْعَادَاتِ لَيْلَةَ مَوْلِدِ",
+          "english": "And extraordinary wonders occurred in that night in which the Prophet (ﷺ) was born."
+        },
+        {
+          "arabic": "آيَاتُهُ وَالْمُعْجِزَاتُ كَثِيرَةٌ",
+          "english": "There are so many proofs and miracles related to him (ﷺ).\n(Note: Extraordinary wonders and miracles shown by Allah through the prophets (A) to prove their prophethood are known as Mu’jiza. Extraordinary wonders which appear from Auliya (by Allah’s order) as honour for them are known as Karamat)"
+        },
+        {
+          "arabic": "شَهِدَتْ بِصِحَّتِهَا عُقُولُ الْحُسَّدِ",
+          "english": "The envious people’s wisdom bore witness to its (proofs and miracles) truthfulness."
+        },
+        {
+          "arabic": "اَلْبَدْرُ شُقَّ بِأَمْرِهِ وَالشَّمْسُ إِذْ",
+          "english": "The moon was split by his (ﷺ) order.\n(Note: This event is mentioned in the Holy Qur’an (54:1). This event is also reported in many Hadiths. So, it cannot be denied by any believer (Ibnu Katheer 4/261; Sharahu Muslim 2/373)"
+        },
+        {
+          "arabic": "غَرُبَتْ لَهُ رُدَّتْ بِغَيْرِ تَرَدُّدِ",
+          "english": "and the sun which had already set down was returned for him, without giving any chance for doubt (for the quarrellers about this occurrence)\n[Note: This event happened amidst the travel for the Battle of Khaiber at one place, namely, Sahbaah (in 7 H). As the Prophet (ﷺ) was taking rest in his lap, Ali (Radhiyallahu Anhu) could not perform the Asar prayer on time. So, the Prophet (ﷺ) prayed to Allah to bring the sun back for a while and it happened. Similar event is reported   in 6- H also in the battle of Khandaq in the favour of Rasulullah (ﷺ) and Swahaba."
+        },
+        {
+          "arabic": "وَالْوَحْشُ وَاْلأَشْجَارُ قَدْ سَجَدَتْ لَهُ",
+          "english": "Animals and trees came to him in obedience. (it was in reply to the challenge of the opponents)"
+        },
+        {
+          "arabic": "وَعَلَيْهِ قَدْ سَلَّمْنَ بَعْدَ تَشَهُّدِ",
+          "english": "They all Greeted him (ﷺ) with salaam (Assalamu Alaikum ya Rasulallah) after reciting Shahadah (Ash-hadu Alla ilaha illallahu Wa-ashhadu Anna Muhammadarrasoolullah)"
+        },
+        {
+          "arabic": "وَمِنَ الْيَسِيرِ سَقَى وَأَطْعَمَ جَيْشَهُ",
+          "english": "the Prophet (ﷺ) served his soldiers and followers from very little food and drink until all got out of their hunger"
+        },
+        {
+          "arabic": "حَتَّي اكْتَفَوا وَّيَسِيرُهُ لَمْ يَنْفَدِ",
+          "english": "It was sufficient for them – the little food which was blessed by his touch and prayers never ran out (even after feeding all the soldiers)"
+        },
+        {
+          "arabic": "وَلَهُ الْوَسِيلَةُ وَالْفَضِيلَةُ وَالْعُلَى",
+          "english": "He deserves the position of Waseela (highest position in the pardise which is reserved for the prophet (ﷺ), Fadheela (it is another position in the paradise which is reserved for him (ﷺ)) and many other positions."
+        },
+        {
+          "arabic": "وَمَقَامُهُ الْمَحْمُودُ يَوْمَ الْمَوْعِدِ",
+          "english": "And (he also got) Al-Maqamul Mahmud, on the day of promise, i.e. the Day of Judgment.\n(Al-maqamul mahmood is the position where the prophet (ﷺ) will make his Grand-Intercession- الشفاعة العظمى)"
+        },
+        {
+          "arabic": "أَوْصَافُهُ مَا يَنْتَهِي تَعْدَادُهَا",
+          "english": "His good qualities are uncountable."
+        },
+        {
+          "arabic": "فَالْمَدْحُ يَقْصُرُ عَنْ بُلُوغِ الْمَقْصَدِ",
+          "english": "If we wish to praise him (ﷺ) perfectly, we cannot reach our goal"
+        },
+        {
+          "arabic": "يَا سَيِّدَ السَّادَاتِ جِئْتُكَ قَاصِدًا",
+          "english": "Oh, the leader of the leaders, I came to you (ﷺ) wishing your (ﷺ) closeness and love."
+        },
+        {
+          "arabic": "أَرْجُو حِمَاكَ فَلاتُخَيِّبْ مَقْصَدِي",
+          "english": "I need your (ﷺ) protection (Barakas and shafa-‘a), please do not allow me to fail in my attempt."
+        },
+        {
+          "arabic": "قَدْ حَلَّ بِي مَا قَدْ عَلِمْتَ مِنَ اْلأَذَى",
+          "english": "You know what problems I am facing"
+        },
+        {
+          "arabic": "وَالظُّلْمِ وَالضُّعْفِ الشَّدِيدِ فَأَسْعِدِ",
+          "english": "Torture, serious helplessness, so please help me (By your blessings and shafa‘a)"
+        },
+        {
+          "arabic": "مَا لِي سِوَى حُبِّي لَدَيْكَ وَسِيلَةٌ",
+          "english": "I do not have any path to bring me to you except my love towards you (ﷺ)"
+        },
+        {
+          "arabic": "فَامْنُنْ عَلَيَّ بِفَضْلِ جُودِكَ أَسْعَدِ",
+          "english": "So, please bestow your bounties upon me, so that I would be blessed."
+        },
+        {
+          "arabic": "إِنِّي نَزِيلُكَ وَالنَّزِيلُ لَدَيْكَ يَا",
+          "english": "Verily, I have come as your (ﷺ) guest and the one who comes as your guest"
+        },
+        {
+          "arabic": "خَيْرَ اْلأَنَامِ بِكُلِّ خَيْرٍ يَغْتَدِ",
+          "english": "Oh, the Best of all Creatures (ﷺ), he (the guest) will return with all goodness."
+        },
+        {
+          "arabic": "فَعَلَيْكَ مِنَّا كُلَّ وَقْتٍ دَائِمًا",
+          "english": "So always be upon you from us"
+        },
+        {
+          "arabic": "أَزْكَى الصَّلَاةِ مَعَ السَّلَامِ السَّرْمَدِ",
+          "english": "(Prayers for) The ever-growing swalats-blessings, along with continuous salams-greetings"
+        },
+        {
+          "arabic": "وَعَلَى صَحَابَتِكَ الْكِرَامِ جَمِيعِهِمْ",
+          "english": "And upon all your companions (swahaba) who are very honoured"
+        },
+        {
+          "arabic": "وَالتَّابِعِينَ لَهُمْ بِخَيْرٍ فَاجْهَدِ",
+          "english": "And upon those who were preceded by them in the way of truth. So, (Oh reader) please do your best (to be among with them in the next world)"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "source": "6 eng Dua.xlsx",
+      "entries": [
+        {
+          "arabic": "اَللَّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِناَ مُحَمَّد",
+          "english": "Oh Allah, bestow Your blessings on our leader Prophet Muhammad (ﷺ) and his kin"
+        },
+        {
+          "arabic": "صَلَوةً تُنْجِينَا بِهَا مِنْ جَمِيعِ اْلأَهْوَالِ وَالْبَلِيَّاتِ",
+          "english": "And grant them peace, which protects us from all horrors and disasters,"
+        },
+        {
+          "arabic": "وَتُسَلِّمُنَا بِهَا مِنْ جَمِيعِ اْلأَسْقَامِ وَاْلأَفَاتِ",
+          "english": "which saves us from all ailments and calamities"
+        },
+        {
+          "arabic": "وَتُطَهِّرُنَا بِهَا مِنْ جَمِيعِ السَّيِّئَاتِ",
+          "english": "which cleans us from all sinful activities"
+        },
+        {
+          "arabic": "وَتَغْفِرُ لَنَا بِهَا جَمِيعَ الْخَطِيئَاتِ",
+          "english": "and (by which) you will forgive us all of our mistakes"
+        },
+        {
+          "arabic": "وَتَقْضِي لَنَا بِهَا جَمِيعَ الْحَاجَاتِ",
+          "english": "and fulfil all our needs"
+        },
+        {
+          "arabic": "وَتَرْفَعُنَا بِهَا عِنْدَكَ أَعْلَى الدَّرَجَاتِ",
+          "english": "and elevate us to top positions"
+        },
+        {
+          "arabic": "وَتُبَلِّغُناَ بِهَا أَقْصَى الْغَايَاتِ مِنْ جَمِيعِ الْخَيْرَاتِ فيِ الْحَيَوةِ وَبَعْدَ الْمَمَاتِ",
+          "english": "and raise us to the highest level in all our utmost goals in this life and hereafter"
+        },
+        {
+          "arabic": "اَللَّهُمَّ إِنَّا نَتَوَسَّلُ إِلَيْكَ بِاسْمِكَ الْعَظيِمِ",
+          "english": "Oh, Allah we plead to You by Your Greatest Name,"
+        },
+        {
+          "arabic": "وَبِجَاهِ نَبِيِّكَ الْكَرِيمِ وَوَلِيِّكَ الْعَظِيمِ",
+          "english": "And Your Holy Prophet’s position, and Your Great Waliy’s status\n(Note: the word ‘Waliy’ here refers to the author (the Sheikh Maqdoom), as it is believed that this dua was added to the Maulid later or it means Waliy of the place because it is reported that there would be ‘Auliyaullah’ in every region"
+        },
+        {
+          "arabic": "أَنْ تُكَفّرَ عَنَّا الذُّنُوبَ",
+          "english": "to forgive us our sins,"
+        },
+        {
+          "arabic": "وَتَسْتُرَ الْعُيُوبَ وَتُحَسِّنَ اْلأَخْلاَقَ",
+          "english": "to conceal our disabilities, and improve our characters"
+        },
+        {
+          "arabic": "وَتُوَسِّعَ اْلأَرْزَاقَ وَتَشْفِيَ اْلأَسْقَامَ",
+          "english": "to increase our livelihood, and heal our ailments"
+        },
+        {
+          "arabic": "وَتُعَافِيَ اْلآلاَمَ وَأَنْ تَدْفَعَ عَنَّا وَعَنْ أَهْلِ بَلَدِناَ وَبَيْتِناَ هَذَا السُّمَّ النَّاقِعَ",
+          "english": "to remove our pains, and protect us and the people of this country and house from this dreadful toxin."
+        },
+        {
+          "arabic": "وَالدَّاءَ الْقَامِعَ وَالْوَبَاءَ الْقَاطِعَ إِنَّكَ مُجِيبٌ سَامِعٌ",
+          "english": "and deadly disease, and other contagious diseases. (e.g. plague)\n(Note: the continuous natural calamities and diseases plaguing the Malabar community was the main reason for writing this Moulid.)\nVerily You are the Best to Respond (to Prayers) and All-Hearing."
+        },
+        {
+          "arabic": "وَأَنْ تَصْرِفَ عَنَّا الطَّاعُونَ وَالْبَلاَءَ وَتَعْصِمَنَا مِنْ إِنْزَالِ قَهْرِكَ وَالْوَبَاءِ",
+          "english": "to eradicate from us the plague, small pox and to keep us away from Your anger and all disasters,"
+        },
+        {
+          "arabic": "وَتَحْجُبَنَا بِنُورِكَ مِنْ شَرِّ عَدُوِّنَا وَشَرِّ الْمَلْعُونِ",
+          "english": "and cover us with Your Nur from evil of our enemy and shaitan,"
+        },
+        {
+          "arabic": "وَمِنْ شَرِّ الْوَبَاءِ وَالطَّاعُونِ",
+          "english": "to save us from the plague and small pox."
+        },
+        {
+          "arabic": "اَللَّهُمَّ لاَ تُؤَاخِذْناَ بِسُوءِ أَفْعَالِناَ وَلاَ تُهْلِكْنَا بِخَطَايَانَا",
+          "english": "Oh Allah, please do not punish us due to our bad deeds and do not destroy us due to our mistakes."
+        },
+        {
+          "arabic": "اَللَّهُمَّ إِنَّا نَسْئَلُكَ أَنْ تُعِيذَنَا مِنْ عَذَابِ الْقَبْرِ",
+          "english": "Oh Allah, we seek refuge in You from the torment of Qabr"
+        },
+        {
+          "arabic": "وَ تُؤْمِنَناَ مِنَ اْلفَزَعِ اْلأَكْبَرِ وَتُنْجِيَنَا عَنْ دَارِ الْبَوَارْ",
+          "english": "and safeguard us from the worst tensions of the Day of Judgment, and save us from hellfire,"
+        },
+        {
+          "arabic": "وَتُسْكِنَنَا اْلفِرْدَوْسَ مِنْ دَارِ الْقَرَارِ",
+          "english": "and allow us to stay in Firdaus in paradise"
+        },
+        {
+          "arabic": "بِحَقِّ مُحَمَّدٍ وَآلِهِ اْلأَبْرَارِ وَأَصْحَابِهِ اْلأَخْيَار",
+          "english": "by the status of Muhammad (ﷺ), by his excellent kin, and by his great companions,"
+        },
+        {
+          "arabic": "بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينْ",
+          "english": "by Your mercy, Oh Most Merciful."
+        },
+        {
+          "arabic": "وَصَلَّى اللهُ عَلَى خَيْرِ خَلْقِهِ سَيِّدِناَ مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ أَجْمَعِينْ",
+          "english": "May Allah bestow His blessings upon the best of His creatures, our leader Muhammad (ﷺ), and on his kin and all of his companions,"
+        },
+        {
+          "arabic": "وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينْ",
+          "english": "And all praises belong to Allah the Lord of All Worlds"
+        }
+      ]
+    }
+  ]
+}

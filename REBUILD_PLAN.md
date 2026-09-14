@@ -39,6 +39,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - [x] Implement About Mawlid and About App views.
 - [x] Add basic screen interaction states.
 - [ ] Replace placeholder text with verified workbook/PDF content.
+- [x] Load verified English workbook content into the Flutter reader.
 - [ ] Add real chapter pagination and reading position state.
 
 **Exit criteria:** A user can move through every screenshot-visible flow from the home screen without dead ends.
@@ -47,7 +48,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 
 - [ ] Parse the six chapter PDFs into structured chapter content.
 - [ ] Convert the six Kannada workbooks into app-ready structured content.
-- [ ] Convert the six English workbooks into app-ready structured content.
+- [x] Convert the six English workbooks into app-ready structured content.
 - [ ] Add Malayalam, Kannada, and English content where available.
 - [ ] Inspect the supplied hadis archive for Q&A and explanation content.
 - [ ] Identify or recover reciter audio files from the supplied archives.
@@ -83,8 +84,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 | --- | --- | --- | --- |
 | 1. Reference Audit | In progress | Kannada normalization and PSD export remain | Normalize translations, export needed artwork |
 | 2. Flutter Mobile Foundation | In progress | Launcher and splash artwork remain | Export branding artwork when tooling is available |
-| 3. Interactive Prototype | In progress | Content is still placeholder | Connect verified workbook/PDF content |
-| 4. Content and Audio | Not started | Audio source not yet confirmed | Inspect archives |
+| 3. Interactive Prototype | In progress | Kannada and chapter selection content remain | Connect all verified content |
+| 4. Content and Audio | In progress | Kannada encoding and audio source need confirmation | Normalize Kannada and inspect audio |
 | 5. Visual Fidelity | Not started | Needs device screenshot comparison | Capture Android/iOS screens |
 | 6. Verification and Release | Not started | Device/build targets need setup | Run analyzer and mobile builds |
 
@@ -98,6 +99,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - `english/1 Eng.xlsx` through `english/6 Eng.xlsx` - chapter-wise English translation source.
 - `manqusmawlidpdf/Chapter 1.pdf` through `chapter 6 dua.pdf` - chapter-wise Arabic/source PDF material.
 - `PHASE1_AUDIT.md` - verified source mapping, workbook schema, encoding findings, and design dimensions.
+- `tool/convert_xlsx_sources.py` - offline converter for English workbook content.
+- `assets/content/chapters.json` - generated UTF-8 English chapter content used by the Flutter reader.
 
 ## Decisions Needed Later
 
