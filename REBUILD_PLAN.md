@@ -11,7 +11,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - [x] Review supplied screenshots for home, chapters, reader, reciter, settings, and about flows.
 - [x] Identify the final source text and chapter boundaries from the supplied PDFs.
 - [x] Locate chapter-wise Kannada and English translation workbooks.
-- [ ] Normalize and verify legacy-encoded Kannada cells before publishing them in Flutter.
+- [x] Verify that Kannada workbook cells use legacy encoding rather than Unicode Kannada.
+- [ ] Normalize and visually verify legacy-encoded Kannada cells before publishing them in Flutter.
 - [ ] Extract or export any reusable PSD artwork that improves fidelity.
 
 **Exit criteria:** The product surface, content sources, and visual assets are mapped well enough to implement without guessing at primary screens.
@@ -79,7 +80,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 
 | Phase | Status | Current blocker | Next action |
 | --- | --- | --- | --- |
-| 1. Reference Audit | In progress | Kannada workbook encoding needs verification | Normalize translation source files |
+| 1. Reference Audit | In progress | Kannada normalization and PSD export remain | Normalize translations, export needed artwork |
 | 2. Flutter Mobile Foundation | In progress | Theme and reusable widgets are still default | Define the Flutter theme |
 | 3. Interactive Prototype | Not started | Flutter screens need implementation | Port the visual prototype |
 | 4. Content and Audio | Not started | Audio source not yet confirmed | Inspect archives |
@@ -95,6 +96,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - `Kannada/1 K.xlsx` through `Kannada/6 dua.xlsx` - chapter-wise Kannada translation and explanation source.
 - `english/1 Eng.xlsx` through `english/6 Eng.xlsx` - chapter-wise English translation source.
 - `manqusmawlidpdf/Chapter 1.pdf` through `chapter 6 dua.pdf` - chapter-wise Arabic/source PDF material.
+- `PHASE1_AUDIT.md` - verified source mapping, workbook schema, encoding findings, and design dimensions.
 
 ## Decisions Needed Later
 
