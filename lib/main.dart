@@ -623,6 +623,9 @@ class ReaderScreen extends StatefulWidget {
 
 class _ReaderScreenState extends State<ReaderScreen> {
   bool showExplanation = false;
+  bool selectedHasExplanation = false;
+  int? selectedChapterNumber;
+  int? selectedEntryIndex;
   final scrollController = ScrollController();
   final chapterKeys = <int, GlobalKey>{};
 
@@ -668,36 +671,15 @@ class _ReaderScreenState extends State<ReaderScreen> {
                   key: chapterKeys[chapter.number],
                   chapterNumber: chapter.number,
                 ),
-                ...chapter.entries.map(
-                  (entry) => Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(18),
-                        child: Text(
-                          entry.arabic,
-                          textAlign: TextAlign.center,
-                          textDirection: TextDirection.rtl,
-                          style: TextStyle(
-                            fontFamily: settings.mushafArabic
-                                ? 'NotoNaskhArabic'
-                                : 'Amiri',
-                            fontSize: 25,
-                            color: deepGreen,
-                          ),
-                        ),
-                      ),
-                      ReaderVerse(
-                        text:
-                            settings.language == 'Kannada' &&
-                                entry.kannada.isNotEmpty
-                            ? entry.kannada
-                            : entry.english,
-                      ),
-                      if (showExplanation && entry.explanation.isNotEmpty)
-                        ExplanationBlock(text: entry.explanation),
-                    ],
+                for (var entryIndex = 0;
+                    entryIndex < chapter.entries.length;
+                    entryIndex++)
+                  _buildVerse(
+                    settings,
+                    chapter,
+                    entryIndex,
+                    chapter.entries[entryIndex],
                   ),
-                ),
               ],
               const SizedBox(height: 86),
             ],
@@ -706,10 +688,11 @@ class _ReaderScreenState extends State<ReaderScreen> {
       ),
       bottomNavigationBar: ReaderActionBar(
         showExplanation: showExplanation,
+        explanationEnabled: selectedHasExplanation,
         reciter: settings.reciter,
         onExplanation: () => setState(() => showExplanation = !showExplanation),
-        onCopy: () => _copyChapter(context),
-        onShare: () => _shareChapter(context),
+        onCopy: () => _copySelectedEntry(context),
+        onShare: () => _shareSelectedEntry(context),
       ),
     ),
   );
@@ -719,37 +702,90 @@ class _ReaderScreenState extends State<ReaderScreen> {
       ? MawlidContent.loadKannada()
       : MawlidContent.loadEnglish();
 
-  Future<String> _chapterText() async {
-    final content = await _loadContent();
+  MawlidEntry? _selectedEntry(MawlidContent? content) {
+    if (content == null || selectedChapterNumber == null || selectedEntryIndex == null) {
+      return null;
+    }
     final chapter = content.chapters.firstWhere(
-      (entry) => entry.number == widget.chapterNumber,
+      (entry) => entry.number == selectedChapterNumber,
       orElse: () => content.chapters.first,
     );
-    return chapter.entries
-        .map((entry) {
-          final translation =
-              appSettings.value.language == 'Kannada' &&
-                  entry.kannada.isNotEmpty
-              ? entry.kannada
-              : entry.english;
-          return '${entry.arabic}\n$translation${entry.explanation.isEmpty ? '' : '\n${entry.explanation}'}';
-        })
-        .join('\n\n');
+    if (selectedEntryIndex! >= chapter.entries.length) return null;
+    return chapter.entries[selectedEntryIndex!];
   }
 
-  Future<void> _copyChapter(BuildContext context) async {
-    await Clipboard.setData(ClipboardData(text: await _chapterText()));
+  Widget _buildVerse(
+    AppSettings settings,
+    MawlidChapter chapter,
+    int entryIndex,
+    MawlidEntry entry,
+  ) {
+    final selected = selectedChapterNumber == chapter.number &&
+        selectedEntryIndex == entryIndex;
+    final translation = settings.language == 'Kannada' && entry.kannada.isNotEmpty
+        ? entry.kannada
+        : entry.english;
+    return GestureDetector(
+      onTap: () => setState(() {
+        selectedChapterNumber = chapter.number;
+        selectedEntryIndex = entryIndex;
+        selectedHasExplanation = entry.explanation.isNotEmpty;
+        showExplanation = false;
+      }),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        color: selected ? paleGreen.withValues(alpha: .7) : Colors.transparent,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(18),
+              child: Text(
+                entry.arabic,
+                textAlign: TextAlign.center,
+                textDirection: TextDirection.rtl,
+                style: TextStyle(
+                  fontFamily: settings.mushafArabic ? 'NotoNaskhArabic' : 'Amiri',
+                  fontSize: 25,
+                  color: deepGreen,
+                ),
+              ),
+            ),
+            ReaderVerse(text: translation, selected: selected),
+            if (selected && showExplanation && entry.explanation.isNotEmpty)
+              ExplanationBlock(text: entry.explanation),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<String?> _selectedText() async {
+    final content = await _loadContent();
+    final entry = _selectedEntry(content);
+    if (entry == null) return null;
+    final translation = appSettings.value.language == 'Kannada' && entry.kannada.isNotEmpty
+        ? entry.kannada
+        : entry.english;
+    return '${entry.arabic}\n$translation${entry.explanation.isEmpty ? '' : '\n${entry.explanation}'}';
+  }
+
+  Future<void> _copySelectedEntry(BuildContext context) async {
+    final text = await _selectedText();
+    if (text == null) return;
+    await Clipboard.setData(ClipboardData(text: text));
     if (context.mounted) {
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('Chapter copied')));
+          .showSnackBar(const SnackBar(content: Text('Verse copied')));
     }
   }
 
-  Future<void> _shareChapter(BuildContext context) async {
+  Future<void> _shareSelectedEntry(BuildContext context) async {
+    final text = await _selectedText();
+    if (text == null) return;
     await SharePlus.instance.share(
       ShareParams(
-        text: await _chapterText(),
-        subject: 'Manqoos Mawlid Chapter ${widget.chapterNumber}',
+        text: text,
+        subject: 'Manqoos Mawlid verse',
       ),
     );
   }
@@ -777,12 +813,14 @@ class ReaderActionBar extends StatelessWidget {
   const ReaderActionBar({
     super.key,
     required this.showExplanation,
+    required this.explanationEnabled,
     required this.reciter,
     required this.onExplanation,
     required this.onCopy,
     required this.onShare,
   });
   final bool showExplanation;
+  final bool explanationEnabled;
   final String reciter;
   final VoidCallback onExplanation;
   final VoidCallback onCopy;
@@ -829,6 +867,7 @@ class ReaderActionBar extends StatelessWidget {
                 icon: Icons.article,
                 label: 'EXPLANATION',
                 active: showExplanation,
+                enabled: explanationEnabled,
                 onPressed: onExplanation,
               ),
               _ReaderAction(icon: Icons.copy, label: 'COPY', onPressed: onCopy),
@@ -851,20 +890,22 @@ class _ReaderAction extends StatelessWidget {
     required this.label,
     required this.onPressed,
     this.active = false,
+    this.enabled = true,
   });
   final IconData icon;
   final String label;
   final VoidCallback onPressed;
   final bool active;
+  final bool enabled;
 
   @override
   Widget build(BuildContext context) => Expanded(
     child: SizedBox(
       height: 72,
       child: TextButton(
-        onPressed: onPressed,
+        onPressed: enabled ? onPressed : null,
         style: TextButton.styleFrom(
-          foregroundColor: active ? paleGreen : Colors.white,
+          foregroundColor: enabled && active ? paleGreen : Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 6),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
         ),
@@ -872,7 +913,15 @@ class _ReaderAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: active ? paleGreen : Colors.white, size: 25),
+            Icon(
+              icon,
+              color: !enabled
+                  ? Colors.white38
+                  : active
+                  ? paleGreen
+                  : Colors.white,
+              size: 25,
+            ),
             const SizedBox(height: 3),
             FittedBox(
               fit: BoxFit.scaleDown,
@@ -880,7 +929,11 @@ class _ReaderAction extends StatelessWidget {
                 label,
                 maxLines: 1,
                 style: TextStyle(
-                  color: active ? paleGreen : Colors.white,
+                    color: !enabled
+                      ? Colors.white38
+                      : active
+                      ? paleGreen
+                      : Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 11,
                 ),
@@ -940,16 +993,31 @@ class _ArabicPdfScreenState extends State<ArabicPdfScreen> {
                 padding: const EdgeInsets.fromLTRB(12, 0, 12, 16),
                 child: DecoratedBox(
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: brightGreen, width: 2),
-                    borderRadius: BorderRadius.circular(6),
+                    color: deepGreen,
+                    border: Border.all(color: paleGreen, width: 2),
+                    borderRadius: BorderRadius.circular(10),
+                    image: const DecorationImage(
+                      image: AssetImage('reciter_bg.png'),
+                      fit: BoxFit.cover,
+                      opacity: .55,
+                    ),
                     boxShadow: const [
                       BoxShadow(color: Colors.black12, blurRadius: 5),
                     ],
                   ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
-                    child: Image.asset(asset, fit: BoxFit.contain),
+                  child: Padding(
+                    padding: const EdgeInsets.all(7),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.white, width: 2),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(3),
+                        child: Image.asset(asset, fit: BoxFit.contain),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -1013,13 +1081,15 @@ class ChapterDivider extends StatelessWidget {
 }
 
 class ReaderVerse extends StatelessWidget {
-  const ReaderVerse({super.key, required this.text});
+  const ReaderVerse({super.key, required this.text, this.selected = false});
   final String text;
+  final bool selected;
   @override
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.all(22),
-    decoration: const BoxDecoration(
-      border: Border(top: BorderSide(color: Colors.black12)),
+    decoration: BoxDecoration(
+      border: const Border(top: BorderSide(color: Colors.black12)),
+      color: selected ? paleGreen.withValues(alpha: .35) : null,
     ),
     child: Text(
       text,
