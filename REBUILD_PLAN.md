@@ -23,7 +23,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - [x] Define the app theme, typography, colors, and reusable ornamental widgets.
 - [x] Bundle supplied image assets through Flutter asset configuration.
 - [x] Set up a route/state structure for home, chapters, reader, reciter, settings, and about screens.
-- [ ] Add Android and iOS app metadata, launcher icon, and splash treatment.
+- [x] Add Android and iOS display-name metadata.
+- [ ] Add the final launcher icon and splash artwork after PSD export.
 
 **Exit criteria:** The app builds and launches on both mobile targets with the main route structure in place.
 
@@ -81,7 +82,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 | Phase | Status | Current blocker | Next action |
 | --- | --- | --- | --- |
 | 1. Reference Audit | In progress | Kannada normalization and PSD export remain | Normalize translations, export needed artwork |
-| 2. Flutter Mobile Foundation | In progress | App metadata and launcher treatment remain | Add mobile branding metadata |
+| 2. Flutter Mobile Foundation | In progress | Launcher and splash artwork remain | Export branding artwork when tooling is available |
 | 3. Interactive Prototype | In progress | Content is still placeholder | Connect verified workbook/PDF content |
 | 4. Content and Audio | Not started | Audio source not yet confirmed | Inspect archives |
 | 5. Visual Fidelity | Not started | Needs device screenshot comparison | Capture Android/iOS screens |
