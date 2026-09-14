@@ -252,33 +252,45 @@ class ChaptersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Chapters')),
-      body: PatternBody(
-        child: Column(
-          children: List.generate(
-            6,
-            (index) => Padding(
-              padding: const EdgeInsets.only(bottom: 16),
-              child: OutlinedButton(
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<void>(builder: (_) => const ReaderScreen()),
-                ),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.white,
-                  side: const BorderSide(color: Colors.white),
-                  minimumSize: const Size.fromHeight(58),
-                ),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    '0${index + 1}  ${index == 5 ? 'Dua' : 'Hadees & Baith'}',
-                    style: const TextStyle(fontSize: 18),
+      body: FutureBuilder<MawlidContent>(
+        future: MawlidContent.loadEnglish(),
+        builder: (context, snapshot) {
+          final content = snapshot.data ?? MawlidContent.fallbackEnglish();
+          final chapters = content.chapters;
+          return PatternBody(
+            child: ListView.builder(
+              itemCount: chapters.length,
+              itemBuilder: (context, index) {
+                final chapter = chapters[index];
+                final label = chapter.number == 6 ? 'Dua' : 'Hadees & Baith';
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: OutlinedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (_) =>
+                            ReaderScreen(chapterNumber: chapter.number),
+                      ),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      side: const BorderSide(color: Colors.white),
+                      minimumSize: const Size.fromHeight(58),
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Chapter ${chapter.number}  $label',
+                        style: const TextStyle(fontSize: 18),
+                      ),
+                    ),
                   ),
-                ),
-              ),
+                );
+              },
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
@@ -372,7 +384,9 @@ class AboutScreen extends StatelessWidget {
 }
 
 class ReaderScreen extends StatelessWidget {
-  const ReaderScreen({super.key});
+  const ReaderScreen({super.key, this.chapterNumber = 1});
+
+  final int chapterNumber;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -380,18 +394,25 @@ class ReaderScreen extends StatelessWidget {
     body: FutureBuilder<MawlidContent>(
       future: MawlidContent.loadEnglish(),
       builder: (context, snapshot) {
-        if (!snapshot.hasData) {
-          return const Center(child: CircularProgressIndicator(color: brightGreen));
-        }
-        final entries = snapshot.data!.chapters.first.entries.take(3);
+        final content = snapshot.data ?? MawlidContent.fallbackEnglish();
+        final chapter = content.chapters.firstWhere(
+          (entry) => entry.number == chapterNumber,
+          orElse: () => content.chapters.first,
+        );
+
         return ListView(
-          children: entries
+          children: chapter.entries
               .map(
                 (entry) => Column(
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(18),
-                      child: Text(entry.arabic, textAlign: TextAlign.center, textDirection: TextDirection.rtl, style: const TextStyle(fontSize: 25, color: deepGreen)),
+                      child: Text(
+                        entry.arabic,
+                        textAlign: TextAlign.center,
+                        textDirection: TextDirection.rtl,
+                        style: const TextStyle(fontSize: 25, color: deepGreen),
+                      ),
                     ),
                     ReaderVerse(text: entry.english),
                   ],

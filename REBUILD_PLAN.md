@@ -40,6 +40,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - [x] Add basic screen interaction states.
 - [ ] Replace placeholder text with verified workbook/PDF content.
 - [x] Load verified English workbook content into the Flutter reader.
+- [ ] Stabilize async chapter loading for tests and device flow.
 - [ ] Add real chapter pagination and reading position state.
 
 **Exit criteria:** A user can move through every screenshot-visible flow from the home screen without dead ends.
@@ -84,7 +85,7 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 | --- | --- | --- | --- |
 | 1. Reference Audit | In progress | Kannada normalization and PSD export remain | Normalize translations, export needed artwork |
 | 2. Flutter Mobile Foundation | In progress | Launcher and splash artwork remain | Export branding artwork when tooling is available |
-| 3. Interactive Prototype | In progress | Kannada and chapter selection content remain | Connect all verified content |
+| 3. Interactive Prototype | In progress | Async chapter asset loading in widget test still needs final stabilization | Stabilize content-loading flow and complete route verification |
 | 4. Content and Audio | In progress | Kannada encoding and audio source need confirmation | Normalize Kannada and inspect audio |
 | 5. Visual Fidelity | Not started | Needs device screenshot comparison | Capture Android/iOS screens |
 | 6. Verification and Release | Not started | Device/build targets need setup | Run analyzer and mobile builds |

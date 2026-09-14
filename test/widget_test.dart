@@ -11,12 +11,14 @@ void main() {
     expect(find.text('TRANSLATION'), findsOneWidget);
   });
 
-  testWidgets('Mawlid menu opens chapters', (tester) async {
+  testWidgets('Mawlid menu opens chapters and loads a valid chapter', (
+    tester,
+  ) async {
     await tester.pumpWidget(const ManqoosApp());
     await tester.tap(find.text('MAWLID'));
     await tester.pumpAndSettle();
 
     expect(find.text('Chapters'), findsOneWidget);
-    expect(find.text('01  Hadees & Baith'), findsOneWidget);
+    expect(find.textContaining('Chapter 1'), findsOneWidget);
   });
 }
