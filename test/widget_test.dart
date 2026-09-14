@@ -7,15 +7,14 @@ void main() {
     await tester.pumpWidget(const ManqoosApp());
 
     expect(find.text('ISLAMIC WAY'), findsOneWidget);
-    expect(find.text('MAWLID'), findsOneWidget);
-    expect(find.text('TRANSLATION'), findsOneWidget);
+    expect(find.text('MAWLID'), findsNWidgets(2));
   });
 
   testWidgets('Mawlid menu opens chapters and loads a valid chapter', (
     tester,
   ) async {
     await tester.pumpWidget(const ManqoosApp());
-    await tester.tap(find.text('MAWLID'));
+    await tester.tap(find.text('MAWLID').first);
     await tester.pumpAndSettle();
 
     expect(find.text('Chapters'), findsOneWidget);

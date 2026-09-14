@@ -13,6 +13,8 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - [x] Locate chapter-wise Kannada and English translation workbooks.
 - [x] Verify that Kannada workbook cells use legacy encoding rather than Unicode Kannada.
 - [ ] Normalize and visually verify legacy-encoded Kannada cells before publishing them in Flutter.
+- [x] Add a dedicated diagnostic script to confirm that the Kannada workbooks are legacy-encoded rather than native Unicode Kannada.
+- [x] Convert Kannada workbooks to UTF-8 Unicode using the verified Nudi mapping from `aravindavk/ascii2unicode`.
 - [ ] Extract or export any reusable PSD artwork that improves fidelity.
 
 **Exit criteria:** The product surface, content sources, and visual assets are mapped well enough to implement without guessing at primary screens.
@@ -101,6 +103,10 @@ Rebuild the Manqoos Mawlid experience in Flutter for both iOS and Android from t
 - `manqusmawlidpdf/Chapter 1.pdf` through `chapter 6 dua.pdf` - chapter-wise Arabic/source PDF material.
 - `PHASE1_AUDIT.md` - verified source mapping, workbook schema, encoding findings, and design dimensions.
 - `tool/convert_xlsx_sources.py` - offline converter for English workbook content.
+- `tool/kannada_workbook_diagnostics.py` - confirms whether the Kannada workbooks contain native Unicode Kannada or legacy-encoded text.
+- `tool/normalize_kannada_sources.py` - converts Nudi text only with an explicit verified mapping and writes UTF-8 JSON.
+- `assets/content/kannada_chapters.json` - generated UTF-8 Kannada content verified against the six source workbooks.
+- `THIRD_PARTY_NOTICES.md` - attribution and licensing boundary for the external Nudi converter used during content preparation.
 - `assets/content/chapters.json` - generated UTF-8 English chapter content used by the Flutter reader.
 
 ## Decisions Needed Later

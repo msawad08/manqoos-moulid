@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:pdfrx/pdfrx.dart';
 
 import 'content.dart';
 
 const deepGreen = Color(0xff087509);
 const brightGreen = Color(0xff16820c);
 const paleGreen = Color(0xffd7e99d);
+
+final appSettings = ValueNotifier(const AppSettings());
+final currentChapter = ValueNotifier(1);
+
+class AppSettings {
+  const AppSettings({this.translationEnabled = true, this.mushafArabic = true});
+
+  final bool translationEnabled;
+  final bool mushafArabic;
+
+  AppSettings copyWith({bool? translationEnabled, bool? mushafArabic}) =>
+      AppSettings(
+        translationEnabled: translationEnabled ?? this.translationEnabled,
+        mushafArabic: mushafArabic ?? this.mushafArabic,
+      );
+}
 
 void main() => runApp(const ManqoosApp());
 
@@ -19,6 +36,10 @@ class ManqoosApp extends StatelessWidget {
       colorScheme: ColorScheme.fromSeed(seedColor: brightGreen),
       useMaterial3: true,
       fontFamily: 'Georgia',
+      textTheme: const TextTheme(
+        bodyLarge: TextStyle(fontFamily: 'NotoSansKannada'),
+        bodyMedium: TextStyle(fontFamily: 'NotoSansKannada'),
+      ),
     ),
     home: const HomeScreen(),
   );
@@ -40,7 +61,15 @@ class _HomeScreenState extends State<HomeScreen> {
       child: selectedTab == 0
           ? const HomeContent()
           : selectedTab == 1
-          ? const ReaderScreen()
+          ? ValueListenableBuilder<AppSettings>(
+              valueListenable: appSettings,
+              builder: (context, settings, _) => ValueListenableBuilder<int>(
+                valueListenable: currentChapter,
+                builder: (context, chapter, _) => settings.translationEnabled
+                    ? ReaderScreen(chapterNumber: chapter)
+                    : ArabicPdfScreen(chapterNumber: chapter),
+              ),
+            )
           : const SettingsScreen(),
     ),
     bottomNavigationBar: NavigationBar(
@@ -51,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         NavigationDestination(icon: Icon(Icons.home_outlined), label: 'HOME'),
         NavigationDestination(
           icon: Icon(Icons.menu_book_outlined),
-          label: 'TRANSLATION',
+          label: 'MAWLID',
         ),
         NavigationDestination(
           icon: Icon(Icons.settings_outlined),
@@ -269,8 +298,18 @@ class ChaptersScreen extends StatelessWidget {
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                        builder: (_) =>
-                            ReaderScreen(chapterNumber: chapter.number),
+                        builder: (_) {
+                          currentChapter.value = chapter.number;
+                          return ValueListenableBuilder<AppSettings>(
+                            valueListenable: appSettings,
+                            builder: (context, settings, _) =>
+                                settings.translationEnabled
+                                ? ReaderScreen(chapterNumber: chapter.number)
+                                : ArabicPdfScreen(
+                                    chapterNumber: chapter.number,
+                                  ),
+                          );
+                        },
                       ),
                     ),
                     style: OutlinedButton.styleFrom(
@@ -341,25 +380,48 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
   String language = 'Kannada';
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Settings')),
-    body: Padding(
-      padding: const EdgeInsets.all(24),
-      child: Row(
+  Widget build(BuildContext context) => ValueListenableBuilder<AppSettings>(
+    valueListenable: appSettings,
+    builder: (context, settings, _) => Scaffold(
+      appBar: AppBar(title: const Text('Settings')),
+      body: ListView(
+        padding: const EdgeInsets.all(24),
         children: [
-          const Expanded(
-            child: Text(
-              'Translation language',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Translation language',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              DropdownButton<String>(
+                value: language,
+                items: const [
+                  DropdownMenuItem(value: 'Kannada', child: Text('Kannada')),
+                  DropdownMenuItem(value: 'English', child: Text('English')),
+                ],
+                onChanged: (value) => setState(() => language = value!),
+              ),
+            ],
+          ),
+          SwitchListTile.adaptive(
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Show translation'),
+            subtitle: const Text('When disabled, open the Arabic chapter PDF'),
+            value: settings.translationEnabled,
+            onChanged: (value) => appSettings.value = settings.copyWith(
+              translationEnabled: value,
             ),
           ),
-          DropdownButton<String>(
-            value: language,
-            items: const [
-              DropdownMenuItem(value: 'Kannada', child: Text('Kannada')),
-              DropdownMenuItem(value: 'English', child: Text('English')),
-            ],
-            onChanged: (value) => setState(() => language = value!),
+          SwitchListTile.adaptive(
+            contentPadding: EdgeInsets.zero,
+            title: const Text('Mushaf Arabic font'),
+            subtitle: const Text('Use Noto Naskh Arabic instead of Amiri'),
+            value: settings.mushafArabic,
+            onChanged: (value) => appSettings.value = settings.copyWith(
+              mushafArabic: value,
+            ),
           ),
         ],
       ),
@@ -389,10 +451,12 @@ class ReaderScreen extends StatelessWidget {
   final int chapterNumber;
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Mawlid Translation')),
-    body: FutureBuilder<MawlidContent>(
-      future: MawlidContent.loadEnglish(),
+  Widget build(BuildContext context) => ValueListenableBuilder<AppSettings>(
+    valueListenable: appSettings,
+    builder: (context, settings, _) => Scaffold(
+      appBar: AppBar(title: const Text('Mawlid')),
+      body: FutureBuilder<MawlidContent>(
+      future: MawlidContent.loadKannada(),
       builder: (context, snapshot) {
         final content = snapshot.data ?? MawlidContent.fallbackEnglish();
         final chapter = content.chapters.firstWhere(
@@ -411,10 +475,16 @@ class ReaderScreen extends StatelessWidget {
                         entry.arabic,
                         textAlign: TextAlign.center,
                         textDirection: TextDirection.rtl,
-                        style: const TextStyle(fontSize: 25, color: deepGreen),
+                        style: TextStyle(
+                          fontFamily: settings.mushafArabic
+                              ? 'NotoNaskhArabic'
+                              : 'Amiri',
+                          fontSize: 25,
+                          color: deepGreen,
+                        ),
                       ),
                     ),
-                    ReaderVerse(text: entry.english),
+                    ReaderVerse(text: entry.kannada.isEmpty ? entry.english : entry.kannada),
                   ],
                 ),
               )
@@ -422,6 +492,19 @@ class ReaderScreen extends StatelessWidget {
         );
       },
     ),
+    ),
+  );
+}
+
+class ArabicPdfScreen extends StatelessWidget {
+  const ArabicPdfScreen({super.key, required this.chapterNumber});
+
+  final int chapterNumber;
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: Text('Mawlid Chapter $chapterNumber')),
+    body: PdfViewer(PdfDocumentRefAsset(pdfAssetForChapter(chapterNumber))),
   );
 }
 
@@ -436,7 +519,12 @@ class ReaderVerse extends StatelessWidget {
     ),
     child: Text(
       text,
-      style: const TextStyle(color: deepGreen, fontSize: 19, height: 1.55),
+      style: const TextStyle(
+        color: deepGreen,
+        fontFamily: 'NotoSansKannada',
+        fontSize: 19,
+        height: 1.55,
+      ),
     ),
   );
 }

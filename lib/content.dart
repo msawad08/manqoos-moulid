@@ -3,14 +3,23 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 class MawlidEntry {
-  const MawlidEntry({required this.arabic, required this.english});
+  const MawlidEntry({
+    required this.arabic,
+    required this.english,
+    this.kannada = '',
+    this.explanation = '',
+  });
 
   final String arabic;
   final String english;
+  final String kannada;
+  final String explanation;
 
   factory MawlidEntry.fromJson(Map<String, dynamic> json) => MawlidEntry(
     arabic: json['arabic'] as String? ?? '',
     english: json['english'] as String? ?? '',
+    kannada: json['kannada'] as String? ?? '',
+    explanation: json['explanation'] as String? ?? '',
   );
 }
 
@@ -72,13 +81,24 @@ class MawlidContent {
   );
 
   static Future<MawlidContent> loadEnglish() async {
+    return load('English', 'assets/content/chapters.json');
+  }
+
+  static Future<MawlidContent> loadKannada() async {
+    return load('Kannada', 'assets/content/kannada_chapters.json');
+  }
+
+  static Future<MawlidContent> load(String language, String asset) async {
     try {
-      final source = await rootBundle.loadString(
-        'assets/content/chapters.json',
-      );
+      final source = await rootBundle.loadString(asset);
       return MawlidContent.fromJson(jsonDecode(source) as Map<String, dynamic>);
     } catch (_) {
       return fallbackEnglish();
     }
   }
 }
+
+String pdfAssetForChapter(int chapterNumber) =>
+    chapterNumber == 6
+        ? 'assets/pdf/chapter 6 dua.pdf'
+        : 'assets/pdf/Chapter $chapterNumber.pdf';
